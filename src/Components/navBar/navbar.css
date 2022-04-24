@@ -1,8 +1,9 @@
 .navbar-menu{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 20px;
+    border-bottom: solid 1px;
 }
 
 .navbar-menu-name{
@@ -12,5 +13,5 @@
 .navbar-menu-links{
     width: 15%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }

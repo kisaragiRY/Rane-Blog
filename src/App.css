@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  background-color: var(--color-bg);
+}
+* a{
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+* li{
+  list-style: none;
+}
