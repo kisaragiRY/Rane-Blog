@@ -17,7 +17,8 @@ export default function Navbar() {
         }
     },[location]);
     const Bgcolor={backgroundColor:navBg}
-    const Linkcolor={backgroundColor:navBg,color:navLinks};
+    const Linkcolor={backgroundColor:navBg,
+                     color:navLinks,};
 
   return (
     <div className='navbar' style={Bgcolor}>

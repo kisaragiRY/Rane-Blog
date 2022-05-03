@@ -1,6 +1,7 @@
 *{
   margin: 0;
   background-color: var(--color-bg);
+  font-family: var(--font-family);
 }
 * a{
   text-decoration: none;

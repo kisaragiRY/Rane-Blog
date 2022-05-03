@@ -5,6 +5,7 @@
     padding: 100px 0;
     text-align: right;
     /* background-color: var(--color-red); */
+    border-bottom: solid 1px;
 }
 .home-quote span{
     font-size: 40px;
