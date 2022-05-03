@@ -1,16 +1,23 @@
-.navbar-menu{
+.navbar{
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
-    padding: 20px;
-    border-bottom: solid 1px;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid 1px ;
+    font-weight: 600;
+    font-family: var(--font-family);
 }
-
-.navbar-menu-name{
+/* .navbar a:hover{
+    color: var(--color-red);
+    transition-duration: 500ms;
+} */
+.navbar-name{
     font-size: 20px;
 }
 
+
 .navbar-menu-links{
+    font-size: 15px;
     width: 15%;
     display: flex;
     justify-content: space-around;

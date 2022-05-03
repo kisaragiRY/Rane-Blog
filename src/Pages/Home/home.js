@@ -1,7 +1,15 @@
 import React from 'react'
+import './home.css'
 
 export default function Home() {
   return (
-    <div>This is home page</div>
+    <div>
+        <div className='home-quote'>
+            <span>sup, I'm up</span>
+        </div>
+        <div>
+            Recent article
+        </div>
+    </div>
   )
 }
