@@ -21,7 +21,7 @@ export default function Navbar() {
                      color:navLinks,};
 
   return (
-    <div className='navbar' style={Bgcolor}>
+    <nav className='navbar' style={Bgcolor}>
         <div className='navbar-name'>
             <li><Link to='/' style={Linkcolor}>Rane's Blog</Link></li> 
         </div>
@@ -29,6 +29,6 @@ export default function Navbar() {
         <li ><Link to='/post'  style={Linkcolor}>Post</Link></li>
         <li><Link to='/about' style={Linkcolor}>About</Link></li>
         </div>
-    </div>
+    </nav>
   )
 }

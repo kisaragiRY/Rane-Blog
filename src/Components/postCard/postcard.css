@@ -1,0 +1,19 @@
+.card-container{
+    padding: 20px;
+    min-height: 150px;
+    border-bottom: solid 1px var(--color-grey);
+}
+.card-container h2{
+    letter-spacing: 2px;
+}
+
+.abstract{
+    margin: 10px 0;
+    font-weight: 200;
+}
+
+.card-container span{
+    /* display: block; */
+    color: var(--color-grey);
+    margin-right: 5px;
+}

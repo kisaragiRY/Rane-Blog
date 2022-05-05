@@ -1,0 +1,36 @@
+.post-container{
+    margin: auto;
+    width: 75%;
+}
+.tag-menu{
+    padding: 20px;
+    border-bottom: solid 1px var(--color-grey);
+
+}
+
+.tag-menu span:nth-child(1){
+    margin-right: 8px;
+    color: var(--color-grey) ;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+}
+
+.tag_title{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 18px;
+}
+.tag_title span{ 
+    margin-right: 8px;
+    color: var(--color-text) ;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    margin-left: 5px;
+}
+
+.tag_icon{
+    font-size: 30px;
+    transform: translateY(18%);
+}

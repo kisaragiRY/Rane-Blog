@@ -1,11 +1,16 @@
 .navbar{
+    top: 0;
     display: flex;
+    position: sticky;
+    height: 80px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     border-bottom: solid 1px ;
     font-weight: 600;
     font-family: var(--font-family);
+    box-sizing: border-box;
 }
 /* .navbar a:hover{
     color: var(--color-red);
