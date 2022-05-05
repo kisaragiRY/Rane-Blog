@@ -23,17 +23,17 @@ export default function PostCard(props) {
         <h2>{props.title}</h2>
         <p className='abstract'>{post.substring(0,150)} ...</p>
         <span>{props.date}</span>
-        {(props.tags.map((tag,key)=>{
-            if(tag!==''){
-                return (
+        {(props.tags.map((tag,key)=>
+            (tag!=='')&&
                     <Button 
-                        key={tag} 
-                        padding={"1px 5px"}
-                        font_size={"12px"} 
-                        onClick={()=>{
-                            let path=`/post/${tag}`;
-                            navigate(path)}}>{tag}</Button>)}
-        }))}
+                      key={key} 
+                      padding={"1px 5px"}
+                      font_size={"12px"} 
+                      onClick={()=>{
+                          let path=`/post/${tag}`;
+                          navigate(path)}}>{tag}
+                    </Button>
+        ))}
 
     </div>
 

@@ -13,7 +13,16 @@ export default function Post() {
   let navigate=useNavigate();
   let {tag}=useParams(); //parameters from url
 
-
+  const sort_json=(json)=>{
+    const time_to_int=(string)=>{
+      const s=string.split('/')
+      const new_s=s[2]+s[0]+s[1]
+      return parseInt(new_s)
+    }
+    let json_arr=Object.keys(json).map((key)=>json[key])
+    json_arr.sort((a,b)=>time_to_int(b.creat_time)-time_to_int(a.creat_time))
+    return json_arr
+  }
   return (
     <div>
       {/* the main post page */}
@@ -32,7 +41,7 @@ export default function Post() {
           )}
         </div>
         <div className='post-list'>
-          {blogs.map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name}/>)}
+          {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name}/>)}
         </div>
       </div>}
 
@@ -52,7 +61,7 @@ export default function Post() {
             <div className='tag_title'><BiPurchaseTagAlt className='tag_icon'/><span>{tag}</span></div>
         </div>
         <div className='post-list'>
-          {blogs.map((data,key)=> 
+          {sort_json(blogs).map((data,key)=> 
             data.tag.includes(tag)&&  //filter based on tag
             <PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name}/>
             )}
