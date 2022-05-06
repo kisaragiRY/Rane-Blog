@@ -1,7 +1,7 @@
 .home-quote{
     width:100%;
     margin: auto;
-    padding: 200px 0;
+    padding: 150px 0;
     /* background-color: var(--color-red); */
     border-bottom: solid 1px;
 }
@@ -12,9 +12,97 @@
     letter-spacing: 2px;
     margin: auto;
     text-align: right;
-    /* background: -webkit-linear-gradient(60deg,var(--color-text), var(--color-red));
+    background: -webkit-linear-gradient(30deg,var(--color-text), var(--color-red));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
     display: block;
     width: 80%;
+}
+.recent-article{
+    margin: 30px auto;
+    padding: 20px;
+    width: 90%;
+    /* border: solid 2px; */
+    min-height: 300px;
+
+}
+
+.list-container{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-around;
+    overflow: hidden;
+}
+.article-card span:nth-child(1){
+    color: var(--color-grey);
+    font-size: 30px;
+    font-weight: 100;
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+.article-card span:nth-child(2){
+    color: var(--color-text);
+    font-size: 20px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+@media (max-width:50em){ 
+    /* 640px */
+    .article-card{
+        min-height: 50px;
+        min-width: 300px;
+        margin: 5px 0;
+    }
+}
+ @media (max-width:62em) and (min-width:50em){
+    .recent-article{
+        width: 85%;
+    }
+    .article-card{
+        min-height: 70px;
+        min-width: 200px;
+        max-width: 270px;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width:62em) and (max-width:80em){
+    .recent-article{
+        width: 80%;
+    }
+
+    .article-card{
+        min-height: 70px;
+        min-width: 300px;
+        max-width: 330px;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width:80em){
+    .recent-article{
+        width: 70%;
+    }
+    .article-card{
+        min-height: 70px;
+        min-width: 300px;
+        max-width: 380px;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width:98em){
+    .recent-article{
+        width: 65%;
+    }
+    .article-card{
+        min-height: 70px;
+        min-width: 300px;
+        max-width: 400px;
+        margin: 5px 0;
+    }
 }
