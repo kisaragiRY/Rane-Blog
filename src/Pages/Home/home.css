@@ -2,7 +2,7 @@
     width:100%;
     margin: auto;
     padding: 150px 0;
-    /* background-color: var(--color-red); */
+    background-color: var(--color-red);
     border-bottom: solid 1px;
 }
 .home-quote span{
@@ -12,7 +12,7 @@
     letter-spacing: 2px;
     margin: auto;
     text-align: right;
-    background: -webkit-linear-gradient(30deg,var(--color-text), var(--color-red));
+    background: -webkit-linear-gradient(100deg,var(--color-bg), var(--color-red));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: block;
@@ -37,12 +37,17 @@
     align-content: space-around;
     overflow: hidden;
 }
+.article-card{
+    display: flex;
+}
 .article-card span:nth-child(1){
     color: var(--color-grey);
     font-size: 30px;
     font-weight: 100;
     margin-right: 10px;
     letter-spacing: 2px;
+    background: transparent;
+    line-height: 36px;
 }
 .article-card span:nth-child(2){
     color: var(--color-text);
@@ -58,7 +63,7 @@
         margin: 5px 0;
     }
 }
- @media (max-width:62em) and (min-width:50em){
+ @media (max-width:60em) and (min-width:50em){
     .recent-article{
         width: 85%;
     }
@@ -70,7 +75,7 @@
     }
 }
 
-@media (min-width:62em) and (max-width:80em){
+@media (min-width:60em) and (max-width:80em){
     .recent-article{
         width: 80%;
     }

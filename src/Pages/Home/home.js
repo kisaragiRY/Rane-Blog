@@ -2,7 +2,7 @@ import React from 'react'
 import './home.css'
 import blogs from '../../Blogs/blogs.json'
 import { sort_json } from '../../Helpers/utils'
-import PostCard from '../../Components/postCard/PostCard'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -15,7 +15,8 @@ export default function Home() {
           <div className='list-container'>
             {sort_json(blogs).slice(0,4).map((article,key)=>
             <div key={key} className='article-card'>
-              <span>0{key+1}</span><span><a href='#'>{article.title}</a></span>
+              <span>0{key+1}</span>
+              <span><Link to={{pathname:`/post/${btoa(article.file_name)}`}}>{article.title}</Link></span>
             </div>)}
           </div>
         </div>

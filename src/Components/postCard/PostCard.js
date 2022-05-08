@@ -1,13 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import './postcard.css'
 import { Button } from '../Button/Button.style'
-import { useNavigate} from 'react-router-dom';
+import { useNavigate,Link} from 'react-router-dom';
 
 export default function PostCard(props) {
     let navigate=useNavigate();
     
     const file_name=props.file_name;
     const [post,setPost]=useState('')
+
 
     useEffect(()=>{
         import(`../../Blogs/Posts/${file_name}`)
@@ -20,7 +21,7 @@ export default function PostCard(props) {
       })
   return (
     <div className='card-container'>
-        <h2>{props.title}</h2>
+        <h2><Link to={{pathname:`/post/${btoa(props.file_name)}`}}>{props.title}</Link></h2>
         <p className='abstract'>{post.substring(0,150)} ...</p>
         <span>{props.date}</span>
         {(props.tags.map((tag,key)=>
@@ -30,7 +31,7 @@ export default function PostCard(props) {
                       padding={"1px 5px"}
                       font_size={"12px"} 
                       onClick={()=>{
-                          let path=`/post/${tag}`;
+                          let path=`/post/tag/${tag}`;
                           navigate(path)}}>{tag}
                     </Button>
         ))}

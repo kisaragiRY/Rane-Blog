@@ -5,14 +5,15 @@ import PostCard from '../../Components/postCard/PostCard'
 import { Button } from '../../Components/Button/Button.style'
 import { useNavigate,useLocation,useParams} from 'react-router-dom'
 import {BiPurchaseTagAlt} from "react-icons/bi"
-import { sort_json } from '../../Helpers/utils'
+import { sort_json} from '../../Helpers/utils'
+import PostDetail from '../PostDetail/PostDetail'
 
 export default function Post() {
   const tag_list=['test1','test2','test3'] // tag_list
 
   let location=useLocation();
   let navigate=useNavigate();
-  let {tag}=useParams(); //parameters from url
+  let {tag,blog_id}=useParams(); //parameters from url
 
   return (
     <div>
@@ -26,7 +27,7 @@ export default function Post() {
                     padding={"8px 15px"}
                     font_size={"15px"} 
                     onClick={()=>{
-                      let path=`/post/${tag}`;
+                      let path=`/post/tag/${tag}`;
                       navigate(path)}}>{tag}
             </Button>
           )}
@@ -37,7 +38,7 @@ export default function Post() {
       </div>}
 
       {/* tag page */}
-      {location.pathname===`/post/${tag}`&&
+      {location.pathname===`/post/tag/${tag}`&&
       <div className='post-container'>
         <div className='tag-menu'>
           <span>Blog tags</span> 
@@ -46,7 +47,7 @@ export default function Post() {
                     padding={"8px 15px"} 
                     font_size={"15px"}
                     onClick={()=>{
-                      let path=`/post/${tag}`;
+                      let path=`/post/tag/${tag}`;
                       navigate(path)}}>{tag}
             </Button>)}
             <div className='tag_title'><BiPurchaseTagAlt className='tag_icon'/><span>{tag}</span></div>
@@ -58,6 +59,9 @@ export default function Post() {
             )}
         </div>
       </div>}
+
+      {/* post detail page */}
+      {location.pathname===`/post/${blog_id}`&&<PostDetail blog_id={blog_id}/>}
         
       
     </div>

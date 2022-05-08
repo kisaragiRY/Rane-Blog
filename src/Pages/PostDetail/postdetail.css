@@ -1,0 +1,20 @@
+.post-wrapper{
+    margin: 20px auto;
+    width: 70%;
+}
+.markdown{
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.markdown p{
+    margin: 20px 0;
+}
+
+.lang-python{
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+}

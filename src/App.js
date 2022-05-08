@@ -9,8 +9,9 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/post/' element={<Post/>}/>
-        <Route path='/post/:tag' element={<Post/>}/>
+        <Route exact path='/post/' element={<Post/>}/>
+        <Route path='/post/tag/:tag' element={<Post/>}/>
+        <Route path='/post/:blog_id' element={<Post/>}/>
         <Route path='/about' element={<About/>}/>
 
       </Routes>
