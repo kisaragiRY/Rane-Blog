@@ -2,7 +2,6 @@ import React,{useEffect, useState} from 'react'
 import Markdown from 'markdown-to-jsx'
 
 import './about.css'
-import { Tag } from '../../Assets/icons/tag'
 
 export default function About() {
   const file_name="about.md"
@@ -23,7 +22,7 @@ export default function About() {
         <span>About Me</span>
       </div>
       <div className='about-post'>
-        <Markdown options={{overrides:{DatePicker:{component: Tag,}}}}>{post}</Markdown>
+        <Markdown>{post}</Markdown>
       </div>
     </div>
   )

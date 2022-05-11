@@ -11,10 +11,3 @@
 .markdown p{
     margin: 20px 0;
 }
-
-.lang-python{
-    display: block;
-    padding: 10px;
-    background-color: black;
-    color: aliceblue;
-}

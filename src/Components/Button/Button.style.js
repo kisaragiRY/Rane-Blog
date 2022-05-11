@@ -8,10 +8,11 @@ export const Button =styled.button`
   padding: ${(props)=>props.padding};
   color: var(--color-text);
   letter-spacing: 2px;
+  background-color:white;
   &:hover{
   cursor: pointer;
   background-color: var(--color-red);
-  color: var(--color-bg);
+  color: white;
   transition: 0.1s;
   }
 `

@@ -1,6 +1,5 @@
 *{
   margin: 0;
-  background-color: var(--color-bg);
   font-family: var(--font-family);
   box-sizing: border-box;
 }
@@ -12,4 +11,9 @@
 
 * li{
   list-style: none;
+}
+
+::selection{
+  color: var(--color-bg);
+  background-color: var(--color-red);
 }
