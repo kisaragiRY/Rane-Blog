@@ -8,7 +8,8 @@ export default function Navbar() {
     const [navLinks,setNavLinks]=useState();
     const [navBorder,setBorder]=useState();
     useEffect(()=>{
-        if(window.location.pathname==="/"){
+        const homeUrl=process.env.PUBLIC_URL;
+        if(window.location.pathname===homeUrl+"/"){
             setNavBg("var(--color-red)");
             setNavLinks("var(--color-bg)");
             setBorder("solid 0px");
