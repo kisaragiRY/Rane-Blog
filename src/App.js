@@ -11,7 +11,7 @@ function App() {
       <Navbar/>
       <Routes>
           {/* <Route path='*' element={<Error/>} /> */}
-          <Route exact path='/'  element={<Home/>}/>
+          <Route path='/'  element={<Home/>}/>
           <Route path= '/post/' element={<Post/>}/>
           <Route path='/post/tag/:tag' element={<Post/>}/>
           <Route path= '/post/:blog_id' element={<Post/>}/>
