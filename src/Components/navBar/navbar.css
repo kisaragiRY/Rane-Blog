@@ -9,7 +9,6 @@
     padding: 20px;
     font-weight: 600;
     font-family: var(--font-family);
-    z-index: 1000;
 }
 .navbar-name{
     font-size: 20px;
