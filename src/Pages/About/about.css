@@ -1,17 +1,19 @@
+
 .about-title{
     width: 100%;
     margin: auto;
     padding: 100px 0;
     text-align: center;
-    /* background: var(--color-red); */
+    background: var(--color-red);
     border-bottom: solid 1px;
 }
 .about-title span{
-    /* color: var(--color-bg); */
+    color: var(--color-bg);
     background-color: transparent;
-    font-size: 80px;
+    font-size: 4em;
     /* font-weight: 600; */
-    font-family: 'Reenie Beanie', cursive;
+    /* font-family: 'Reenie Beanie', cursive; */
+    font-family: 'Bungee Outline', cursive;
     letter-spacing: 20px;
 }
 .about-post{

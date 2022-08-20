@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
         <div className='home-quote'>
-            <span>sup, I'm up</span>
+            <span>Rane's Blog</span>
         </div>
         <div className='recent-article'>
           <h2>Recent Articles</h2>

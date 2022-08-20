@@ -7,9 +7,10 @@ import { useNavigate,useLocation,useParams} from 'react-router-dom'
 import {BiPurchaseTagAlt} from "react-icons/bi"
 import { sort_json} from '../../Helpers/utils'
 import PostDetail from '../PostDetail/PostDetail'
+import {TAG_LIST} from '../../Helpers/const'
 
 export default function Post() {
-  const tag_list=['test1','test2','test3'] // tag_list
+  // const tag_list=['test1','test2','test3'] // tag_list
 
   let location=useLocation();
   let navigate=useNavigate();
@@ -22,10 +23,10 @@ export default function Post() {
       <div className='post-container'>
         <div className='tag-menu'>
           <span>Blog tags</span> 
-          {(tag_list).map((tag,key)=>
+          {(TAG_LIST).map((tag,key)=>
             <Button key={key} 
-                    padding={"8px 15px"}
-                    font_size={"15px"} 
+                    padding={".3em .3em"}
+                    font_size={"1em"} 
                     onClick={()=>{
                       let path=`/post/tag/${tag}`;
                       navigate(path)}}>{tag}
@@ -42,7 +43,7 @@ export default function Post() {
       <div className='post-container'>
         <div className='tag-menu'>
           <span>Blog tags</span> 
-          {(tag_list).map((tag,key)=>
+          {(TAG_LIST).map((tag,key)=>
             <Button key={key} 
                     padding={"8px 15px"} 
                     font_size={"15px"}

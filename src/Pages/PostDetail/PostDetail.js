@@ -1,12 +1,18 @@
 import React,{useEffect,useState} from 'react'
-// import Markdown from 'markdown-to-jsx'
 import './postdetail.css'
 import blogs from '../../Blogs/blogs.json'
 import { blog_id_to_blog } from '../../Helpers/utils'
+import 'katex/dist/katex.min.css'
+import Markdown from '../../Components/Markdown/Markdown'
+import "../../Components/Markdown/markdown.css"
+import { TAG_LIST } from '../../Helpers/const'
+import { Button } from '../../Components/Button/Button.style'
+import { useNavigate} from 'react-router-dom'
 
 export default function PostDetail(props) {
     const file_name=atob(props.blog_id)
     const [post,setPost]=useState('')
+    let navigate=useNavigate();
 
     const blog=blog_id_to_blog(blogs,file_name)[0]
     useEffect(()=>{
@@ -21,8 +27,23 @@ export default function PostDetail(props) {
   return (
     <div className='post-wrapper'>
         {/* {console.log(blog_id_to_blog(blogs,file_name)[0].title)} */}
-        <h1>{blog.title}</h1>
-        {/* <Markdown className='markdown'>{post}</Markdown> */}
+        <div className='post-info'>
+            <span>{blog.title}</span>
+            <span>{blog.creat_time}</span>
+            {(TAG_LIST).map((tag,key)=>
+            <Button key={key} 
+                    padding={".1em .3em"}
+                    font_size={".8em"} 
+                    onClick={()=>{
+                      let path=`/post/tag/${tag}`;
+                      navigate(path)}}>{tag}
+            </Button>
+            )}
+        </div>
+        <div className='post-detail'>
+            <Markdown className='markdown' content={post}/>
+        </div>
+
     </div>
   )
 }

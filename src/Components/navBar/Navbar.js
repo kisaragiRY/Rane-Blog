@@ -7,6 +7,8 @@ export default function Navbar() {
     const [navBg,setNavBg]=useState();
     const [navLinks,setNavLinks]=useState();
     const [navBorder,setBorder]=useState();
+    const [isActive,setActive]=useState(false);
+
     useEffect(()=>{
         const homeUrl=process.env.PUBLIC_URL;
         if(window.location.pathname===homeUrl|window.location.pathname===homeUrl+'/'){
@@ -20,19 +22,27 @@ export default function Navbar() {
             setBorder("solid 1px");
         }
     },[location]);
-    const navStyle={backgroundColor:navBg,borderBottom:navBorder}
+    const toggleClass=()=>{
+        setActive(!isActive);
+    }
+    const navStyle={backgroundColor:navBg,borderBottom:navBorder,zIndex:'100'}
     const navMenuBgcolor={backgroundColor:navBg}
     const Linkcolor={backgroundColor:navBg,color:navLinks};
 
   return (
     <nav className='navbar' style={navStyle}>
         <div className='navbar-name'>
-            <li><Link to='/' style={Linkcolor}>Rane's Blog</Link></li> 
+            <li><Link to='/' style={Linkcolor}>Home</Link></li> 
         </div>
-        <div className='navbar-menu-links'  style={navMenuBgcolor}>
-        <li ><Link to='/post'  style={Linkcolor}>Post</Link></li>
-        <li><Link to='/about' style={Linkcolor}>About</Link></li>
+        <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'}  style={navMenuBgcolor}>
+        <li ><Link to='/post'  style={Linkcolor} onClick={()=>{setActive(!isActive);}}>Post</Link></li>
+        <li><Link to='/about' style={Linkcolor} onClick={()=>{setActive(!isActive);}}>About</Link></li>
         </div>
+        <button className={isActive?'hamburger is-active':'hamburger'} style={navMenuBgcolor} onClick={toggleClass}>
+            <span style={{backgroundColor:navLinks}}></span>
+            <span style={{backgroundColor:navLinks}}></span>
+            <span style={{backgroundColor:navLinks}}></span>
+        </button>
     </nav>
   )
 }

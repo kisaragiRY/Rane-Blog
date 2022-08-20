@@ -2,23 +2,26 @@
     margin: 20px auto;
     width: 70%;
 }
-.markdown{
-    font-size: 17px;
-    line-height: 32px;
-    letter-spacing: 1px;
+.post-info{
+    margin: 2em 0;
 }
-
-.markdown p{
-    margin: 20px 0;
-}
-
-.lang-python{
+.post-info span:first-child{
     display: block;
-    padding: 10px;
-    background-color: black;
-    color: aliceblue;
-}
-.lang-python::selection{
+    font-weight: 600;
+    font-size: 2.2em;
+    line-height: 1.2em;
     color: var(--color-red);
-    background-color: var(--color-bg);
+    letter-spacing: .08em;
+    word-spacing: .1em;
+
+}
+.post-info span{
+    color: var(--color-grey);
+    margin-right: 1em;
+}
+
+@media (max-width:35em){
+    .post-wrapper{
+        width: 80%;
+    }
 }

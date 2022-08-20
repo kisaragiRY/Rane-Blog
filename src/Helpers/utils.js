@@ -9,7 +9,7 @@ export const sort_json=(json)=>{
     return json
   }
 
-  export const blog_id_to_blog=(json,file_name)=>{
-    var blog=json.filter(function (i){return i.file_name===file_name});
-    return blog;
-  }
+export const blog_id_to_blog=(json,file_name)=>{
+  var blog=json.filter(function (i){return i.file_name===file_name});
+  return blog;
+}

@@ -3,12 +3,15 @@ import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
 import {Home,Post,About} from './Pages'
 import Navbar from './Components/navBar/Navbar';
+import Footer from './Components/Footer/Footer';
 
-const homeUrl=process.env.PUBLIC_URL;
+// const homeUrl=process.env.PUBLIC_URL;
 function App() {
   return (
+   
     <Router>
       <Navbar/>
+      <div className='container'>
       <Routes>
           {/* <Route path='*' element={<Error/>} /> */}
           <Route path='/'  element={<Home/>}/>
@@ -17,9 +20,10 @@ function App() {
           <Route path= '/post/:blog_id' element={<Post/>}/>
           <Route path= '/about' element={<About/>}/>
       </Routes>
+      <Footer/>
+       </div>
     </Router>
-
-
+   
   );
 }
 

@@ -1,13 +1,16 @@
 *{
   margin: 0;
-  background-color: var(--color-bg);
+  /* background-color: var(--color-bg); */
   font-family: var(--font-family);
   box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
 }
 * a{
   text-decoration: none;
   color: var(--color-text);
-  background-color:none;
+  /* background-color:none; */
 }
 
 * li{
@@ -17,4 +20,11 @@
 ::selection{
   color: var(--color-bg);
   background-color: var(--color-red);
+}
+.container{
+  display: flex;
+  /* border: 1px solid black; */
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }

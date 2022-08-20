@@ -1,6 +1,12 @@
 .post-container{
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    width: 75%;
+    width: 80%;
+}
+.post-list{
+    display: flex;
+    flex-direction: column;
 }
 .tag-menu{
     padding: 20px;
@@ -33,4 +39,9 @@
 .tag_icon{
     font-size: 30px;
     transform: translateY(15%);
+}
+@media (max-width:35em){
+    .post-container{
+        width: 85%;
+    }
 }
