@@ -1,5 +1,5 @@
-# Rane.Z
+# Author: Rane.Z
 
-I'm a Machine Learning and Statistics student.
+This is a blog templet site. You can contact me through rane.z.blog@gmail.com.
 
-This is my blog site. You can contact me through <a href="mailto: rane.z.blog@gmail.com">rane.z.blog@gmail.com</a>
+Visit [ranelog.com](http://ranelog.com) to keep updated.

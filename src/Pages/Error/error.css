@@ -1,0 +1,14 @@
+.error-container{
+    max-width: 90em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error-container>img{
+    max-width: 15em;
+}
+.error-container>p{
+    text-transform: uppercase;
+}

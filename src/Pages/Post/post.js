@@ -45,8 +45,8 @@ export default function Post() {
           <span>Blog tags</span> 
           {(TAG_LIST).map((tag,key)=>
             <Button key={key} 
-                    padding={"8px 15px"} 
-                    font_size={"15px"}
+                    padding={".3em .3em"} 
+                    font_size={"1em"}
                     onClick={()=>{
                       let path=`/post/tag/${tag}`;
                       navigate(path)}}>{tag}

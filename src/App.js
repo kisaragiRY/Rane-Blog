@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
-import {Home,Post,About} from './Pages'
+import {Home,Post,About,Error} from './Pages'
 import Navbar from './Components/navBar/Navbar';
 import Footer from './Components/Footer/Footer';
 
@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
       <div className='container'>
       <Routes>
-          {/* <Route path='*' element={<Error/>} /> */}
+          <Route path='*' element={<Error/>} />
           <Route path='/'  element={<Home/>}/>
           <Route path= '/post/' element={<Post/>}/>
           <Route path='/post/tag/:tag' element={<Post/>}/>

@@ -30,7 +30,8 @@ export default function Navbar() {
     const Linkcolor={backgroundColor:navBg,color:navLinks};
 
   return (
-    <nav className='navbar' style={navStyle}>
+    <div className='navbar-container' style={navStyle}>
+    <nav className='navbar' >
         <div className='navbar-name'>
             <li><Link to='/' style={Linkcolor}>Home</Link></li> 
         </div>
@@ -44,5 +45,6 @@ export default function Navbar() {
             <span style={{backgroundColor:navLinks}}></span>
         </button>
     </nav>
+    </div>
   )
 }
