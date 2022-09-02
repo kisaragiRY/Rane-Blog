@@ -1,2 +1,2 @@
 
-export const TAG_LIST=['test1','test2','test3'];
+export const TAG_LIST=['math','random'];

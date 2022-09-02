@@ -13,9 +13,6 @@ body{
   /* background-color:none; */
 }
 
-* li{
-  list-style: none;
-}
 
 ::selection{
   color: var(--color-bg);

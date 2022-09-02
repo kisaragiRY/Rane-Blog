@@ -14,9 +14,13 @@
     font-weight: 600;
     font-family: var(--font-family);
     margin: 0 auto;
+    z-index: 1000;
+    font-size: 1.5em;
+}
+.navbar li{
+    list-style: none;
 }
 .navbar-name{
-    font-size: 20px;
     margin-left: 10px;
 }
 

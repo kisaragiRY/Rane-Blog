@@ -22,7 +22,8 @@ export default function PostCard(props) {
   return (
     <div className='card-container'>
         <h2><Link to={{pathname:`/post/${btoa(props.file_name)}`}}>{props.title}</Link></h2>
-        <p className='abstract'>{post.substring(0,150)} ...</p>
+        <p className='abstract'>{props.description}</p>
+        {/* {post.substring(0,150)} ... */}
         <span>{props.date}</span>
         {(props.tags.map((tag,key)=>
             (tag!=='')&&
@@ -35,6 +36,7 @@ export default function PostCard(props) {
                           navigate(path)}}>{tag}
                     </Button>
         ))}
+        
 
     </div>
 

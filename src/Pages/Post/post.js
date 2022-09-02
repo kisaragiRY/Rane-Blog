@@ -34,7 +34,7 @@ export default function Post() {
           )}
         </div>
         <div className='post-list'>
-          {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name}/>)}
+          {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>)}
         </div>
       </div>}
 
@@ -56,7 +56,7 @@ export default function Post() {
         <div className='post-list'>
           {sort_json(blogs).map((data,key)=> 
             data.tag.includes(tag)&&  //filter based on tag
-            <PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name}/>
+            <PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>
             )}
         </div>
       </div>}

@@ -1,5 +1,12 @@
-# Author: Rane.Z
+# Rane.Z
 
-This is a blog templete site. You can contact me through rane.z.blog@gmail.com.
 
-Visit [ranelog.com](http://ranelog.com) to keep updated.
+Hi, I'm Rane.
+
+
+This this Rane's official blog where I write about **Math, Statistics, Machine Learning and some random thoughts.**
+
+
+To contact me, you can use the contact form. It would reach me as soon as you click the "**send**" button.
+
+Stay Tuned~

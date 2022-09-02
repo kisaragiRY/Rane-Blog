@@ -1,6 +1,7 @@
 .footer{
-    /* display: block;  */
-    margin: 1em 0;
+    display: flex; 
+    flex-direction: column;
+    margin: .1em 0;
     padding: 1em 0;
     color: #747272;
     /* bottom: 0; */
@@ -8,4 +9,26 @@
     /* left: 0;
     right: 0; */
     /* position: absolute; */
+}
+
+.home-footer{
+    display: flex;
+    flex-direction: column;
+}
+.home-footer h3,p{
+    align-self: flex-start;
+    margin: 0 30px;
+}
+.home-footer h3::before{
+    content: ' ';
+    background: url('../../../public/favicon.ico') no-repeat;
+    display: inline;
+    background-size: contain;
+    /* transform: scale(0.1); */
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+}
+.home-footer hr{
+    margin-bottom: 1em;
 }

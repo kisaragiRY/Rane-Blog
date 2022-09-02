@@ -5,7 +5,6 @@ import { blog_id_to_blog } from '../../Helpers/utils'
 import 'katex/dist/katex.min.css'
 import Markdown from '../../Components/Markdown/Markdown'
 import "../../Components/Markdown/markdown.css"
-import { TAG_LIST } from '../../Helpers/const'
 import { Button } from '../../Components/Button/Button.style'
 import { useNavigate} from 'react-router-dom'
 
@@ -30,7 +29,7 @@ export default function PostDetail(props) {
         <div className='post-info'>
             <span>{blog.title}</span>
             <span>{blog.creat_time}</span>
-            {(TAG_LIST).map((tag,key)=>
+            {(blog.tag).map((tag,key)=>
             <Button key={key} 
                     padding={".1em .3em"}
                     font_size={".8em"} 

@@ -19,5 +19,116 @@
 .about-post{
     margin: auto;
     padding-top: 20px;
-    width: 75%;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
 }
+@media (max-width:60em){
+    .about-post{
+        flex-direction: column;
+    }
+}
+.about-post p{
+    font-size: 1.1em;
+    line-height: 1.4em;
+    margin-bottom: .8em;
+    /* letter-spacing: .0001em; */
+    /* word-spacing: .001em; */
+}
+
+.about-post h1,h2,h3,h4,h5,h6{
+    margin: 1em 0;
+}
+
+input,
+button[type='submit'],
+textarea {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #dadad3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 5px;
+
+    /* &:focus {
+        outline: none;
+    } */
+}
+
+textarea {
+    min-height: 50px;
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+input, button, textarea, select {
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    background-image: none;
+    background-color: #f2f2f1;
+    box-shadow: none;
+    padding: 5px;
+  }
+  input:focus, button:focus, textarea, select:focus {
+    outline-color: var(--color-red);
+  }
+
+
+  textarea {
+    min-height: 25em;
+    resize: vertical;
+  }
+  
+  button {
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .contact-card {
+    border: 1px solid black;
+    max-width: 980px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
+  }
+  .contact-header {
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+  }
+  .contact-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-body__email {
+    margin-top: 10px;
+  }
+  .contact-body__message {
+    margin-top: 10px;
+  }
+  .contact-body__continent{
+    margin-top: 10px;
+  }
+  .contact-body button {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  .sent-message{
+    display: none;
+  }
+  .sent-message.active{
+    display: inline;
+    margin-top: 10px;
+    align-self: flex-end;
+    background-color: var(--color-red);
+    color: white;
+    padding: 0 1em;
+  }
