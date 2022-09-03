@@ -1,34 +1,66 @@
 .footer{
     display: flex; 
     flex-direction: column;
-    margin: .1em 0;
     padding: 1em 0;
     color: #747272;
-    /* bottom: 0; */
     text-align: center;
-    /* left: 0;
-    right: 0; */
-    /* position: absolute; */
+    border-top: solid var(--color-grey) 1px;
+    /* box-shadow: 0px 0 0 #888, 0px 0px 5px #888; */
 }
 
 .home-footer{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+    align-items:stretch;
+    flex-wrap: wrap;
+}
+.home-footer a{
+    /* color: var(--color-red); */
+    cursor: pointer;
+    color: #747272;
 }
 .home-footer h3,p{
-    align-self: flex-start;
-    margin: 0 30px;
+    text-align: left;
 }
-.home-footer h3::before{
-    content: ' ';
-    background: url('../../../public/favicon.ico') no-repeat;
-    display: inline;
-    background-size: contain;
-    /* transform: scale(0.1); */
-    width: 25px;
-    height: 25px;
-    margin-right: 3px;
+.home-footer h3{
+    font-size: 1.1em;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+    color: var(--color-red);
+    /* opacity: 80%; */
 }
-.home-footer hr{
-    margin-bottom: 1em;
+.home-footer p{
+    font-size: .9em;
+}
+.home-footer-left{
+    max-width: 16em;
+}
+.home-footer-left h3{
+    font-size: 1.7em;
+}
+.home-footer-right{
+    display: flex;
+    justify-content: space-between;
+    min-width: 16em;
+    flex-wrap: wrap;
+    margin: 0;
+    align-self: center;
+    
+}
+
+.home-footer-right.contact {
+    margin: .5em 0;
+}
+
+.home-footer-right.p {
+    margin: .5em 0;
+}
+
+
+@media (min-width:50em){ 
+    .home-footer-left{
+        max-width: 22em;
+    }
 }

@@ -3,7 +3,7 @@
     margin: auto;
     padding: 150px 0;
     background-color: var(--color-red);
-    border-bottom: solid 1px;
+    /* border-bottom: solid 1px; */
 }
 .home-quote span{
     font-family: 'Bungee Outline', cursive;
@@ -19,12 +19,13 @@
     width: 80%;
 }
 .recent-article{
-    margin: 30px auto;
-    padding: 20px;
+    margin: 3em auto;
+    padding: 3em;
     width: 90%;
     /* border: solid 2px; */
     min-height: 300px;
-
+    /* border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%; */
 }
 
 .list-container{
