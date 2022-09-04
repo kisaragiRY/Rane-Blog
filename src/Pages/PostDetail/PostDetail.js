@@ -7,6 +7,7 @@ import Markdown from '../../Components/Markdown/Markdown'
 import "../../Components/Markdown/markdown.css"
 import { Button } from '../../Components/Button/Button.style'
 import { useNavigate} from 'react-router-dom'
+import TableOfContents from '../../Components/TableOfContents/tableOfContents'
 
 export default function PostDetail(props) {
     const file_name=atob(props.blog_id)
@@ -39,8 +40,11 @@ export default function PostDetail(props) {
             </Button>
             )}
         </div>
-        <div className='post-detail'>
-            <Markdown className='markdown' content={post}/>
+        <div className='post-content'>
+            <div className='post-detail'>
+                <Markdown className='markdown' content={post}/>
+            </div>
+            <TableOfContents/>
         </div>
 
     </div>

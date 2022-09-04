@@ -1,6 +1,6 @@
 .post-wrapper{
     margin: 20px auto;
-    width: 60%;
+    width: 65%;
 }
 .post-info{
     margin: 2em 0;
@@ -19,9 +19,15 @@
     color: var(--color-grey);
     margin-right: 1em;
 }
+.post-content{
+    display: flex;
+}
 
-@media (max-width:35em){
+@media (max-width:70em){
     .post-wrapper{
         width: 80%;
+    }
+    .post-content{
+        flex-direction: column-reverse;
     }
 }

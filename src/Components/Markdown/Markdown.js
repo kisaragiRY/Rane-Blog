@@ -22,6 +22,18 @@ const CodeBlock= ({ inline, className, children }) => {
       />
     );
   };
+  function flatten(text, child) {
+    return typeof child === 'string'
+      ? text + child
+      : React.Children.toArray(child.props.children).reduce(flatten, text)
+  }
+  
+  function HeadingRenderer(props) {
+    var children = React.Children.toArray(props.children)
+    var text = children.reduce(flatten, '')
+    var slug = text.toLowerCase().replace(/\W/g, '-')
+    return React.createElement('h' + props.level, {id: 'h'+ props.level+slug}, props.children)
+  }
 
 export default function Markdown(props) {
   return (
@@ -29,7 +41,11 @@ export default function Markdown(props) {
     children={props.content}
     remarkPlugins={[remarkMath,remarkGfm]}
     rehypePlugins={[rehypeKatex,rehypeRaw]}
-    components={{code:CodeBlock}}
+    components={{
+      code:CodeBlock,
+      h2:HeadingRenderer,
+      h3:HeadingRenderer
+    }}
     />
   )
 }

@@ -80,7 +80,7 @@ transform: translateX(.8em);
         display: flex;
         flex-direction: column;
         font-size: 1em;
-        padding: 40% 0 60% 43%;
+        padding: 40% 0% 60% 35%;
         width: 100%;
         font-size: 1.7em;
     }

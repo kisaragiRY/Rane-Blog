@@ -9,11 +9,11 @@
 }
 .about-title span{
    /* background-color: transparent; */
-    font-size: 5em;
+    font-size: 4em;
     /* font-weight: 600; */
     /* font-family: 'Reenie Beanie', cursive; */
     font-family: 'Bungee Outline', cursive;
-    letter-spacing: .5em;
+    letter-spacing: .3em;
 }
 .about-me{
     margin: 2em auto;
@@ -31,13 +31,22 @@
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
+  word-break: normal;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
-.que-ans p{
+.ans p{
   letter-spacing: .01em;
   word-spacing: .02em;
   line-height: 1.1em;
-  margin-bottom: .3em;
+  margin-bottom: .34em;
 }
+.que-ans a{
+  hyphens: none;
+}
+
 .que-ans .que::before{
   content: "?";
   margin-left: -2.4em;
@@ -98,26 +107,53 @@
 }
 
 .que-ans mark{
-  background: linear-gradient(transparent 70%, var(--color-red) 30%);
-
+  background: linear-gradient(transparent 60%, rgba(238,97,79,0.4) 30%);
+}
+.que-ans mark.email{
+  word-break: break-all;
 }
 
+@media (max-width:60em){
+  .about-title span{
+    /* background-color: transparent; */
+     font-size: 3em;
+    }
+  .que-ans p{
+    letter-spacing: .02em;
+    word-spacing: .02em;
+    line-height: 1.3em;
+    margin-bottom: .4em;
+  }
+
+  .que-ans{
+    width: 98%;
+    font-size: .8em;
+  }
+  .que-ans .que::before{
+    margin-left: -2em;
+  }
+  .que-ans .que{
+    font-size: 1.1em;
+    margin-right: 1em;
+  }
+  .que-ans .ans::before{
+    right: -1.4em;
+  }
+  .que-ans .ans{
+    font-size: 1.1em;
+    margin-left: 1em;
+  }
+  /* .que-ans mark{
+    background: linear-gradient(transparent 60%, rgba(238,97,79,0.2) 0%);
+  } */
+
+}
 /* @media (max-width:60em){
     .about-post{
         flex-direction: column;
     }
 } */
-.about-post p{
-    font-size: 1.1em;
-    line-height: 1.4em;
-    margin-bottom: .8em;
-    /* letter-spacing: .0001em; */
-    /* word-spacing: .001em; */
-}
 
-.about-post h1,h2,h3,h4,h5,h6{
-    margin: 1em 0;
-}
 
 input,
 button[type='submit'],

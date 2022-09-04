@@ -64,7 +64,7 @@ export default function About() {
           <div className='que'>What are you busy with recently?</div>
           <div className='ans'>
               <p>
-                I'm in the last year of my master program, so school stuff is 
+                I'm in the last year of my master program. School stuff is 
                 my priority. 
               </p>
               <p>On the side, I write blogs, furnishing my website and learning French 🇫🇷.
@@ -75,16 +75,16 @@ export default function About() {
           <div className='que'>What do you do for fun &#x1F60B;?</div>
           <div className='ans'>
               <p>
-                I design houses using an app called shaper3D (no ads here) and sometimes
-                do pixel art (<mark><a href='https://www.instagram.com/kisaragi.z/'>link to my instagram</a></mark>).
+                Enjoy sushi and occasionally
+                do pixel art on <mark><a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a></mark>.
               </p>
           </div>
 
           <div className='que'>How do I contact you?</div>
           <div className='ans'>
               <p>
-                If you have questions about the blogs, and want to have discussion further, 
-                you can write emails to <mark>rane.z.blog@gmail.com</mark>.
+                If you have questions about the blogs, and want to have further discussions, 
+                you can write emails to <mark className='email'>rane.z.blog@gmail.com</mark>.
               </p>
           </div>
           

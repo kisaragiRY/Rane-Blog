@@ -15,8 +15,12 @@ export default function Home() {
           <div className='list-container'>
             {sort_json(blogs).slice(0,4).map((article,key)=>
             <div key={key} className='article-card'>
-              <span>0{key+1}</span>
-              <span><Link to={{pathname:`/post/${btoa(article.file_name)}`}}>{article.title}</Link></span>
+              <div>0{key+1}</div>
+              <div>
+                <Link to={{pathname:`/post/${btoa(article.file_name)}`}}>
+                  {article.title}
+                  </Link>
+                </div>
             </div>)}
           </div>
         </div>
