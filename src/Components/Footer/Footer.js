@@ -25,7 +25,7 @@ export default function Footer() {
             <div className='nav'>
               <h3>explore</h3>
               <p><Link to='/post'>Post</Link></p>
-              <p><Link to='/about'>About Me</Link></p>
+              <p><Link to='/about'>About</Link></p>
             </div>
           </div>
         </div>

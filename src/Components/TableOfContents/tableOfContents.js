@@ -13,7 +13,7 @@ export default function TableOfContents() {
       level: Number(item.nodeName.charAt(1))
     }))
     setHeadings(elements)
-  },[])
+  },[headings])
 
   const getClassName = (level) => {
     switch (level) {

@@ -1,8 +1,8 @@
 .toc {
     position: -webkit-sticky;
     position: sticky;
-    top: 10em;
-    margin-left: 1em;
+    top: 15em;
+    margin-left: 2em;
     align-self: flex-start;
     margin-bottom: 3em;
     min-width: 15em;
@@ -18,6 +18,9 @@
     margin-top: 1em;
     padding: 0 1em; 
 }
+.toc li{
+    margin-bottom: .5em;
+}
 .toc-a.active{
     color: var(--color-red);
     font-weight: bold;
@@ -31,7 +34,7 @@
 @media (max-width:80em){
     .toc {
         position:initial;
-        top: 0;
+        /* top: 0; */
         align-self: flex-start;
     }
 }

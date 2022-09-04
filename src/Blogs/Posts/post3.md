@@ -1,14 +1,5 @@
 上一篇：[拉格朗日对偶问题](./cG9zdDIubWQ=)
 
-## 概要
-
-- 共轭函数(conjugate function)
-- Fenchel对偶问题
-
-
-
-<br>
-
 ## 共轭函数
 
 > 共轭函数定义
