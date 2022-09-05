@@ -31,7 +31,7 @@
 .toc .head3{
     margin-left: 1em;
 }
-@media (max-width:80em){
+@media (max-width:70em){
     .toc {
         position:initial;
         /* top: 0; */

@@ -7,7 +7,7 @@ export const Button =styled.button`
   margin: 5px;
   padding: ${(props)=>props.padding};
   color: var(--color-text);
-  letter-spacing: 2px;
+  letter-spacing: .05em;
   background-color:white;
   &:hover{
   cursor: pointer;

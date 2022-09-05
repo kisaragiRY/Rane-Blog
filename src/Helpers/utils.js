@@ -2,7 +2,7 @@
 export const sort_json=(json)=>{
     const time_to_int=(string)=>{
       const s=string.split('/')
-      const new_s=s[2]+s[0]+s[1]
+      const new_s=s[2]+s[1]+s[0]
       return parseInt(new_s)
     }
     json.sort((a,b)=>time_to_int(b.creat_time)-time_to_int(a.creat_time))

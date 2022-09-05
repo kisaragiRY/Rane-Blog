@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Reenie+Beanie&family=Titillium+Web:wght@200;400;700&display=swap');
 
 :root{
-  --font-family:'Roboto Mono', monospace;
+  --font-family:'Nunito Sans', sans-serif;
   /* --font-family:'M PLUS Rounded 1c', sans-serif; */
 
   --color-bg:white;

@@ -55,9 +55,8 @@ export default function About() {
           <div className='que'>What is this website about?</div>
           <div className='ans'>
               <p>
-                This website is my personal blog where I write about about <mark>Math, 
-                Statistics, Machine Learning and other random stuff</mark>.
-          
+                This website is where I write about about <mark>Math, 
+                Statistics, Machine Learning and share some random stuff</mark>.
               </p>
           </div>
 
@@ -65,9 +64,11 @@ export default function About() {
           <div className='ans'>
               <p>
                 I'm in the last year of my master program. School stuff is 
-                my priority. 
-              </p>
-              <p>On the side, I write blogs, furnishing my website and learning French 🇫🇷.
+                my priority. My research is about the <mark>application of machine learning and 
+                statistical learning</mark> in <mark>Neuroscience</mark> &#129504;.
+              </p> 
+              <p>On the side, I write blogs, furnishing my website, learning French 🇫🇷 and
+                working as an intern in a startup based here in Kyoto, Japan &#9961;.
 
               </p>
           </div>
@@ -75,8 +76,8 @@ export default function About() {
           <div className='que'>What do you do for fun &#x1F60B;?</div>
           <div className='ans'>
               <p>
-                Enjoy sushi and occasionally
-                do pixel art on <mark><a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a></mark>.
+                Enjoy Sushi &#127843; and occasionally
+                do pixel art 🧑‍🎨 on <mark><a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a></mark>.
               </p>
           </div>
 

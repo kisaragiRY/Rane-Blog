@@ -26,7 +26,7 @@
 
 }
 .que-ans{
-  margin: 1em auto;
+  margin:auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,17 +36,16 @@
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-}
-.ans p{
-  letter-spacing: .01em;
-  word-spacing: .02em;
-  line-height: 1.1em;
-  margin-bottom: .34em;
+  color: #484848;
 }
 .que-ans a{
   hyphens: none;
 }
-
+.que-anss p{
+  letter-spacing: .01em;
+  word-spacing: .02em;
+  margin-bottom: .34em;
+}
 .que-ans .que::before{
   content: "?";
   margin-left: -2.4em;
@@ -64,12 +63,13 @@
 	height: 1em;
 	line-height: 1em;
   text-align: center;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
 
 }
 .que-ans .que{
   font-size: 1.2em;
   margin-bottom: 1em;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   border-radius: .5em;
   padding: 1em;
   margin-right: 5em;
@@ -92,13 +92,14 @@
   height: 1em;
   text-align: center;
   line-height: 1em;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
 }
 .que-ans .ans{
   font-size: 1.2em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   padding: .8em;
   align-self: flex-end;
-  border: 1px solid;
+  border: 1px solid var(--color-grey);
   border-radius: .5em;
   margin-left: 3em;
   box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
@@ -107,11 +108,13 @@
 }
 
 .que-ans mark{
+  color: #484848;
   background: linear-gradient(transparent 60%, rgba(238,97,79,0.4) 30%);
 }
 .que-ans mark.email{
   word-break: break-all;
 }
+
 
 @media (max-width:60em){
   .about-title span{
@@ -121,26 +124,24 @@
   .que-ans p{
     letter-spacing: .02em;
     word-spacing: .02em;
-    line-height: 1.3em;
-    margin-bottom: .4em;
+    line-height: 1.5em;
   }
 
   .que-ans{
     width: 98%;
     font-size: .8em;
+    font-size: .9em;
   }
   .que-ans .que::before{
-    margin-left: -2em;
+    margin-left: -2.5em;
   }
   .que-ans .que{
-    font-size: 1.1em;
     margin-right: 1em;
   }
   .que-ans .ans::before{
-    right: -1.4em;
+    right: -1.8em;
   }
   .que-ans .ans{
-    font-size: 1.1em;
     margin-left: 1em;
   }
   /* .que-ans mark{
@@ -148,12 +149,11 @@
   } */
 
 }
-/* @media (max-width:60em){
-    .about-post{
-        flex-direction: column;
-    }
-} */
-
+@media (min-width:1080px){
+  .que-ans{
+    width: 60%;
+  }
+}
 
 input,
 button[type='submit'],
