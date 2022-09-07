@@ -28,8 +28,11 @@
 .toc a{
     color: #676767;
 }
-.toc .head3{
+.toc .head2{
     margin-left: 1em;
+}
+.toc .head3{
+    margin-left: 2em;
 }
 @media (max-width:70em){
     .toc {

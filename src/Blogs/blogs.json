@@ -31,7 +31,14 @@
         "title": "GLM模型在神经编码(neural encoding)与神经解码(neural decoding)的应用",
         "creat_time": "05/09/2022",
         "tag":["statistics","neuroscience"],
-        "file_name":"post5.md",
+        "file_name":"GLM_spike_encoding_models.md",
         "description":"此文是对论文Liam Paninsk et al.2007年发表的论文《Statistical models for neural encoding, decoding, and optimal stimulus design》一个内容上的整理，讲解一些基本的用于神经编码解码的GLM模型"
+    },
+    {
+        "title": "二元逻辑回归 · 数学推导过程及代码实现完全解析",
+        "creat_time": "17/06/2021",
+        "tag":["statistics","math","python"],
+        "file_name":"logistic_model.md",
+        "description":""
     }
 ]
