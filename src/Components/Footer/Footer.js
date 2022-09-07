@@ -11,8 +11,8 @@ export default function Footer() {
         <div className='home-footer'>
           <div className='home-footer-left'>
             <h3>Rane's blog</h3>
-            <p>This this Rane's blog website where she writes about 
-              Math, Statistics, Machine Learning and some other random stuff.</p>
+            <p>This is Rane's blog website where she writes about 
+              Math, Statistics, Machine Learning and other thoughts that come along.</p>
           </div>
 
           <div className='home-footer-right'>

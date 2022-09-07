@@ -11,6 +11,8 @@
 
 Decoding和这正相反，欲从小鼠的神经反应$D$反推小鼠看到的图像$\overrightarrow{x}$，即$P(\overrightarrow{x}|D)$的概率模型
 
+### GLM(generalized linear model)的简述
+
 <hr>
 
 *待续...*
