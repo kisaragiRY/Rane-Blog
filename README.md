@@ -1,4 +1,4 @@
-# Templete blog
+# Open Source Blog Declaimer
 This simple React blog project is writen by author kisaragi(Rane.Z).
 You can freely download it for your own use.
 
