@@ -31,8 +31,8 @@ const CodeBlock= ({ inline, className, children }) => {
   function HeadingRenderer(props) {
     var children = React.Children.toArray(props.children)
     var text = children.reduce(flatten, '')
-    var slug = text.toLowerCase().replace(/\W/g, '-')
-    return React.createElement('h' + props.level, {id: 'h'+ props.level+slug}, props.children)
+    var id_code = Math.floor(Math.random()*10000)//text.toLowerCase().replace(/\W/g, Math.floor(Math.random()*10))
+    return React.createElement('h' + props.level, {id: 'h'+ props.level+id_code}, props.children)
   }
 
 export default function Markdown(props) {
@@ -43,8 +43,10 @@ export default function Markdown(props) {
     rehypePlugins={[rehypeKatex,rehypeRaw]}
     components={{
       code:CodeBlock,
+      h1:HeadingRenderer,
       h2:HeadingRenderer,
-      h3:HeadingRenderer
+      h3:HeadingRenderer,
+      h4:HeadingRenderer
     }}
     />
   )

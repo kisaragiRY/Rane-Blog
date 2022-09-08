@@ -4,17 +4,12 @@ import { useState,useEffect,useRef } from 'react'
 
 
 export default function TableOfContents() {
-  const [headings, setHeadings]= useState([]);
-  const elements_array = Array.from(document.querySelectorAll("h1,h2, h3, h4"))
-    
-  useEffect(()=>{
-    const elements=elements_array.map((item)=>({
-      id: item.id,
-      text:item.innerText,
-      level: Number(item.nodeName.charAt(1))
-    }))
-    setHeadings(elements)
-  },[elements_array])
+  const headings=Array.from(document.querySelectorAll("h1,h2, h3, h4"))
+    .map((item)=>({
+    id: item.id,
+    text:item.innerText,
+    level: Number(item.nodeName.charAt(1))
+  }))
 
   const getClassName = (level) => {
     switch (level) {
@@ -34,34 +29,35 @@ export default function TableOfContents() {
 const observer = useRef()
 const [activeId, setActiveId] = useState('')
 useEffect(() => {
-const handleObsever = (entries) => {
-  entries.forEach((entry) => {
-    if (entry?.isIntersecting) {
-      setActiveId(entry.target.id)
-    }
-  })
-}
+  const handleObsever = (entries) => {
+    entries.forEach((entry) => {
+      if (entry?.isIntersecting) {
+        setActiveId(entry.target.id)
+      }
+    })
+  }
+  observer.current = new IntersectionObserver(handleObsever, {
+    rootMargin: "-30% 0% -35% 0px"}
+  )
 
-observer.current = new IntersectionObserver(handleObsever, {
-  rootMargin: "-30% 0% -35% 0px"}
-)
-
-const elements = document.querySelectorAll("h1,h2, h3", "h4")
-elements.forEach((elem) => observer.current.observe(elem))
-return () => observer.current?.disconnect()
-},[activeId])
+  const elements = document.querySelectorAll("h1,h2, h3,h4")
+  elements.forEach((elem) => observer.current.observe(elem))
+  return () => observer.current?.disconnect()
+})
  
   return (
     <nav className='toc'>
       <p>目录</p>
       <ul>
+        {/* {console.log(headings)} */}
         {headings.map(heading=>(
             <li key={heading.id} className={getClassName(heading.level)}>
                 <a href={`#${heading.id}`}
                     onClick={(e)=>{
                       e.preventDefault()
-                      document.querySelector(`#${heading.id}`).scrollIntoView({behavior:"smooth"})
                       setActiveId(heading.id)
+                      document.querySelector(`#${heading.id}`).scrollIntoView({behavior:"smooth"})
+                      
                       }}
                     // style={{
                     //   fontWeight: activeId === heading.id ? "bold" : "normal" 
