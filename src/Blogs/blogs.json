@@ -12,20 +12,14 @@
         "creat_time": "26/08/2022",
         "tag":["math"],
         "file_name":"post2.md",
-        "description": "介绍什么是对偶问题，常见问题如拉格朗日对偶问题是什么样的，对偶问题和原始问题有什么关系，如何保证对偶问题的和原始问题的最优解一致"
+        "description": "此文简述了什么是对偶问题，常见对偶问题如拉格朗日对偶问题如何推导，对偶问题和原始问题有什么关系，如何保证对偶问题的和原始问题的最优解一致"
     },
     {
         "title": "最优化理论极简入门(第二部分)：Fenchel对偶问题",
         "creat_time": "27/08/2022",
         "tag":["math"],
         "file_name":"post3.md",
-        "description":"介绍了什么是Fenchel对偶问题，如何从拉格朗日对偶问题推导出Fenchel对偶问题"
-    },
-    {
-        "title": "随记（2022夏）",
-        "creat_time": "28/08/2022",
-        "tag":["random"],
-        "file_name":"post4.md"
+        "description":"介绍了什么是Fenchel对偶问题，以及如何从拉格朗日对偶问题推导出Fenchel对偶问题"
     },
     {
         "title": "GLM模型在神经编码(neural encoding)与神经解码(neural decoding)的应用",
@@ -39,6 +33,6 @@
         "creat_time": "17/06/2021",
         "tag":["statistics","math","python"],
         "file_name":"logistic_model.md",
-        "description":""
+        "description":"本文介绍了逻辑回归的由来，以及估计参数的两种常用方法"
     }
 ]
