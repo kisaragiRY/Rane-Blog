@@ -39,55 +39,45 @@ export default function About() {
       <div className='about-title'>
         <span>About Me</span>
       </div>
-      <div className='about-me'>
+      <div className='about-me-faq'>
         {/* <div className='about-markdown'>
           <Markdown content={post} />
         </div> */}
         <div className='que-ans'>
-          <div className='que'>Who are you?</div>
-          <div className='ans'>
-              <p>My name is <mark>Rane</mark>, currently a DS master student 
-                focusing on all kinds of <mark>machine learning algorithms</mark> and
-                of course <mark>statistical learning</mark>.
-              </p>
-          </div>
+          <p className='que'>Who are you?</p>
+          <p className='ans'>
+              My name is Rane, currently a DS master student,  
+              studying machine learning and
+              statistical learning.
+          </p>
 
-          <div className='que'>What is this website about?</div>
-          <div className='ans'>
-              <p>
-                This website is where I write about about <mark>Math, 
-                Statistics, Machine Learning and share some random stuff</mark>.
-              </p>
-          </div>
+          <p className='que'>What is this website about?</p>
+          <p className='ans'>
+                This blog is where I write about about Math, 
+                Statistics, Machine Learning and share some random stuff.
+          </p>
 
-          <div className='que'>What are you busy with recently?</div>
-          <div className='ans'>
-              <p>
+          <p className='que'>What are you busy with recently?</p>
+          <p className='ans'>
                 I'm in the last year of my master program. School stuff is 
-                my priority. My research is about the <mark>application of machine learning and 
-                statistical learning</mark> in <mark>Neuroscience</mark> &#129504;.
-              </p> 
-              <p>On the side, I write blogs, furnishing my website, learning French 🇫🇷 and
+                my priority. My research is about the application of machine learning and 
+                statistical learning in Neuroscience &#129504;.
+              <br/> 
+              On the side, I write blogs, furnishing my website, learning French 🇫🇷 and
                 working as an intern in a startup based here in Kyoto, Japan &#9961;.
+          </p>
 
-              </p>
-          </div>
-
-          <div className='que'>What do you do for fun &#x1F60B;?</div>
-          <div className='ans'>
-              <p>
+          <p className='que'>What do you do for fun &#x1F60B;?</p>
+          <p className='ans'>
                 Enjoy Sushi &#127843; and occasionally
-                do pixel art 🧑‍🎨 on <mark><a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a></mark>.
-              </p>
-          </div>
+                do pixel art 🧑‍🎨 on <a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a>.
+          </p>
 
-          <div className='que'>How do I contact you?</div>
-          <div className='ans'>
-              <p>
+          <p className='que'>How do I contact you?</p>
+          <p className='ans'>
                 If you have questions about the blogs, and want to have further discussions, 
-                you can write emails to <mark className='email'>rane.z.blog@gmail.com</mark>.
-              </p>
-          </div>
+                you can write emails to rane.z.blog@gmail.com.
+          </p>
           
         </div>
 
