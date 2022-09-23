@@ -1,2 +1,2 @@
 
-export const TAG_LIST=['math','random','statistics','neuroscience','python'];
+export const TAG_LIST=['math','statistics','neuroscience','python'];
