@@ -15,7 +15,7 @@
     "react-latex": "^2.0.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^2.1.3",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-katex": "^6.0.2",
     "rehype-raw": "^6.1.1",
@@ -53,5 +53,15 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "homepage": "https://kisaragiry.github.io"
+  "description": "This simple React blog project is writen by author kisaragi(Rane.Z). You can freely download it for your own use.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kisaragiRY/Rane-Blog.git"
+  },
+  "author": "Rane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kisaragiRY/Rane-Blog/issues"
+  }
 }
