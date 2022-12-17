@@ -10,23 +10,32 @@ export default function Footer() {
       {((location.pathname==='/') || (location.pathname==='/about')) &&
         <div className='home-footer'>
           <div className='home-footer-left'>
-            <h3>Rane's blog</h3>
-            <p>This is Rane's blog website where she writes about 
-              Math, Statistics, Machine Learning and other thoughts that come along.</p>
+            <h3>Let's Be Friends</h3>
+            <form className='email-form'>
+                <input type='text' id='name' placeholder='name' />
+              <div>
+                <input type='email' id='email' placeholder='email'/>
+                <button>OK</button>
+              </div>
+              
+            </form>
           </div>
 
           <div className='home-footer-right'>
-            <div className='contact'>
-              <h3>get in touch</h3>
-              <p><a href='https://www.instagram.com/kisaragi.z/' target="_blank" rel="noreferrer">instagram</a></p>
-              <p><a href='https://github.com/kisaragiRY' target="_blank" rel="noreferrer">github</a></p>
-            </div>
-
             <div className='nav'>
               <h3>explore</h3>
               <p><Link to='/post'>Post</Link></p>
+              <p><Link to='/'>Services</Link></p>
               <p><Link to='/about'>About</Link></p>
             </div>
+
+            <div className='contact'>
+              <h3>find me</h3>
+              <p><a href='https://www.youtube.com/channel/UCxyic1BkqjQHIb1nuxpAOeg' target="_blank" rel="noreferrer">YouTube</a></p>
+              <p><a href='https://www.instagram.com/kisaragi.z/' target="_blank" rel="noreferrer">Instagram</a></p>
+              <p><a href='https://github.com/kisaragiRY' target="_blank" rel="noreferrer">GitHub</a></p>
+            </div>
+
           </div>
         </div>
       }
