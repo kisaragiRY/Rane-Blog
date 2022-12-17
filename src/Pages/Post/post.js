@@ -21,43 +21,47 @@ export default function Post() {
       {/* the main post page */}
       {location.pathname==='/post'&&
       <div className='post-container'>
-        <div className='tag-menu'>
-          <span>Blog tags</span> 
-          {(TAG_LIST).map((tag,key)=>
-            <Button key={key} 
-                    padding={".3em .3em"}
-                    font_size={"1em"} 
-                    onClick={()=>{
-                      let path=`/post/tag/${tag}`;
-                      navigate(path)}}>{tag}
-            </Button>
-          )}
-        </div>
-        <div className='post-list'>
-          {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>)}
+        <div className='post-wrapper'>
+          <div className='tag-menu'>
+            <span>Blog tags</span> 
+            {(TAG_LIST).map((tag,key)=>
+              <Button key={key} 
+                      padding={".3em .3em"}
+                      font_size={"1em"} 
+                      onClick={()=>{
+                        let path=`/post/tag/${tag}`;
+                        navigate(path)}}>{tag}
+              </Button>
+            )}
+          </div>
+          <div className='post-list'>
+            {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>)}
+          </div>
         </div>
       </div>}
 
       {/* tag page */}
       {location.pathname===`/post/tag/${tag}`&&
       <div className='post-container'>
-        <div className='tag-menu'>
-          <span>Blog tags</span> 
-          {(TAG_LIST).map((tag,key)=>
-            <Button key={key} 
-                    padding={".3em .3em"} 
-                    font_size={"1em"}
-                    onClick={()=>{
-                      let path=`/post/tag/${tag}`;
-                      navigate(path)}}>{tag}
-            </Button>)}
-            <div className='tag_title'><BiPurchaseTagAlt className='tag_icon'/><span>{tag}</span></div>
-        </div>
-        <div className='post-list'>
-          {sort_json(blogs).map((data,key)=> 
-            data.tag.includes(tag)&&  //filter based on tag
-            <PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>
-            )}
+        <div className='post-wrapper'>
+          <div className='tag-menu'>
+            <span>Blog tags</span> 
+            {(TAG_LIST).map((tag,key)=>
+              <Button key={key} 
+                      padding={".3em .3em"} 
+                      font_size={"1em"}
+                      onClick={()=>{
+                        let path=`/post/tag/${tag}`;
+                        navigate(path)}}>{tag}
+              </Button>)}
+              <div className='tag_title'><BiPurchaseTagAlt className='tag_icon'/><span>{tag}</span></div>
+          </div>
+          <div className='post-list'>
+            {sort_json(blogs).map((data,key)=> 
+              data.tag.includes(tag)&&  //filter based on tag
+              <PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>
+              )}
+          </div>
         </div>
       </div>}
 
