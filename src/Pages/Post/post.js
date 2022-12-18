@@ -35,7 +35,15 @@ export default function Post() {
             )}
           </div>
           <div className='post-list'>
-            {sort_json(blogs).map((data,key)=><PostCard key={key} title={data.title} date={data.creat_time} tags={data.tag} file_name={data.file_name} description={data.description}/>)}
+            {sort_json(blogs).map((data,key)=>
+              <PostCard 
+                key={key} 
+                title={data.title} 
+                date={data.creat_time} 
+                tags={data.tag} 
+                file_name={data.file_name} 
+                description={data.description}/>
+              )}
           </div>
         </div>
       </div>}
