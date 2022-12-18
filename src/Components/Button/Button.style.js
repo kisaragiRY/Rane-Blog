@@ -9,7 +9,7 @@ export const Button =styled.button`
   color: var(--color-text);
   letter-spacing: .05em;
   font-weight: bold;
-  background-color: var(--color-bg);
+  background-color: var(--color-grey);
   &:hover{
     cursor: pointer;
     background-color: var(--color-red);
