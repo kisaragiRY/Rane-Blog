@@ -52,24 +52,24 @@ export default function Home() {
             window_width = '30rem'
             window_name = 'recent_article.html'
             window_content = {recent_ariticle_content}
-            window_start_top = '5rem'
-            window_start_left = '15rem'
+            window_start_top = '5vw'
+            window_start_left = '20vw'
             />
 
           <Window 
             window_width = '30rem'
             window_name = 'about_me.html'
             window_content = {about_me_content}
-            window_start_top = '6rem'
-            window_start_left = '40rem'
+            window_start_top = '10vw'
+            window_start_left = '46vw'
             />
 
           <Window 
             window_width = '30rem'
             window_name = 'services.html'
             window_content = {services_content}
-            window_start_top = '20rem'
-            window_start_left = '2rem'
+            window_start_top = '30vw'
+            window_start_left = '2vw'
             />
         
         </div>
