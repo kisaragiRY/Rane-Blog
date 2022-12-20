@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './home.css'
 import blogs from '../../Blogs/blogs.json'
 import { sort_json } from '../../Helpers/utils'
@@ -47,14 +47,7 @@ export default function Home() {
               <li><Link to='/about' >About</Link></li>
             </div>
         </div>
-        <div className='interface'>
-          <Window 
-            window_width = '30rem'
-            window_name = 'recent_article.html'
-            window_content = {recent_ariticle_content}
-            window_start_top = '5vw'
-            window_start_left = '20vw'
-            />
+        <div className='interface' >
 
           <Window 
             window_width = '30rem'
@@ -62,6 +55,7 @@ export default function Home() {
             window_content = {about_me_content}
             window_start_top = '10vw'
             window_start_left = '46vw'
+
             />
 
           <Window 
@@ -70,6 +64,16 @@ export default function Home() {
             window_content = {services_content}
             window_start_top = '30vw'
             window_start_left = '2vw'
+
+            />
+
+          <Window 
+            window_width = '25rem'
+            window_name = 'recent_article.html'
+            window_content = {recent_ariticle_content}
+            window_start_top = '5vw'
+            window_start_left = '20vw'
+   
             />
         
         </div>
