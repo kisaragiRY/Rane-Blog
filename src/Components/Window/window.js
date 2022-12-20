@@ -1,14 +1,23 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useState} from 'react';
+import Draggable from "react-draggable";
 import './window.css';
 
 export default function Window(props){
+    const [clickCount, setClickCount] = useState(1)
+    const OnMouseClick = () => {
+            setClickCount(clickCount+2)
+        }
     const window_style = {
         width: props.window_width,
         top: props.window_start_top,
-        left: props.window_start_left
+        left: props.window_start_left,
+        zIndex: clickCount
     }
+
+
     return(
-        <div className='window-wrapper' style={window_style}>
+        <Draggable>
+        <div className='window-wrapper' style = {window_style} onClick={OnMouseClick}>
             <div className='window-header' >
                 <span>
                     <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671362504/raneblog.com/circle_ktldki.svg' />
@@ -21,5 +30,6 @@ export default function Window(props){
             </div>
 
         </div>
+        </Draggable>
     )
 }
