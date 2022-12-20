@@ -25,15 +25,29 @@ export default function Home() {
 
   const about_me_content = (
     <div className='about-me'>
-      
+      <div className='bio'>
+        <Link to='/about' >
+          <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671538294/raneblog.com/lady_prof_j6vrwu.svg'/>
+        </Link>
+        <div>
+          <span>Rane</span>
+          <div>
+            <img className='icon' src='https://res.cloudinary.com/kisaragiry/image/upload/v1671539306/raneblog.com/User_box_arxj5j.svg'/>
+            <span>Data Scientist</span>
+          </div>
+          <div>
+            <img className='icon' src='https://res.cloudinary.com/kisaragiry/image/upload/v1671539308/raneblog.com/Message_qfwadj.svg'/>
+            <span>rane.z.blog@gmail.com</span>
+          </div>
+          <div>
+            <img className='icon' src='https://res.cloudinary.com/kisaragiry/image/upload/v1671539304/raneblog.com/Pin_a4quqe.svg'/>
+            <span>Kyoto, Japan</span>
+          </div>
+        </div>
+      </div> 
     </div>
   )
 
-  const services_content = (
-    <div className='services'>
-      
-    </div>
-  )
   return (
     <div className='home-wrapper'>
         <div className='home-intro'>
@@ -43,7 +57,6 @@ export default function Home() {
             <span>Rane's Blog</span>
             <div className='quick-links-wrapper'>
               <li ><Link to='/post' >Post</Link></li>
-              <li><Link to='/' >Service</Link></li>
               <li><Link to='/about' >About</Link></li>
             </div>
         </div>
@@ -55,15 +68,6 @@ export default function Home() {
             window_content = {about_me_content}
             window_start_top = '10vw'
             window_start_left = '46vw'
-
-            />
-
-          <Window 
-            window_width = '30rem'
-            window_name = 'services.html'
-            window_content = {services_content}
-            window_start_top = '30vw'
-            window_start_left = '2vw'
 
             />
 
