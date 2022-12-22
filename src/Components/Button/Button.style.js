@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Button =styled.button`
-  font-size: ${(props)=>props.font_size};;
+  font-size: ${(props)=>props.font_size};
   box-sizing: border-box;
-  border: 2px solid var(--color-text);
+  border: ${(props)=>props.border_thickness} solid var(--color-text);
   margin: 5px;
   padding: ${(props)=>props.padding};
   color: var(--color-text);
