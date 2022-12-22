@@ -37,7 +37,7 @@
 .quick-links-wrapper li{
     display: inline-block;
     padding: .5em .3em;
-    width: 50%;
+    width: 33.3%;
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
@@ -51,7 +51,7 @@
 .interface{
     background-color: var(--color-grey);
     background-image: url("/src/Assets/Dots\ 8px.png");
-    min-height: 35rem;
+    min-height: 40rem;
     border-bottom: 4px solid var(--color-text);
     overflow: hidden;
     position: relative;
@@ -112,6 +112,15 @@
 }
 .bio span:nth-child(1){
     font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.home-service{
+    text-align: center;
+    padding: 1.5rem;
+}
+.home-service span{
+    display: block;
     margin: 1rem 0;
 }
 
