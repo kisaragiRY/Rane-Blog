@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
         <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'} >
         <li ><Link to='/post'   onClick={()=>{setActive(!isActive);}}>Post</Link></li>
-        <li><Link to='/' onClick={()=>{setActive(!isActive);}}>Service</Link></li>
+        <li><Link to='/service' onClick={()=>{setActive(!isActive);}}>Service</Link></li>
         <li><Link to='/about' onClick={()=>{setActive(!isActive);}}>About</Link></li>
         </div>
         <button className={isActive?'hamburger is-active':'hamburger'} onClick={toggleClass}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
-import {Home,Post,About,Error} from './Pages'
+import {Home,Post,About,Error,Service} from './Pages'
 import Navbar from './Components/navBar/Navbar';
 import Footer from './Components/Footer/Footer';
 
@@ -18,6 +18,7 @@ function App() {
           <Route path= '/post/' element={<Post/>}/>
           <Route path='/post/tag/:tag' element={<Post/>}/>
           <Route path= '/post/:blog_id' element={<Post/>}/>
+          <Route path= '/service' element={<Service/>}/>
           <Route path= '/about' element={<About/>}/>
       </Routes>
       <Footer/>

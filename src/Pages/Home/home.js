@@ -79,7 +79,7 @@ export default function Home() {
             <span>Rane's Blog</span>
             <div className='quick-links-wrapper'>
               <li ><Link to='/post' >Post</Link></li>
-              <li><Link to='/' >Service</Link></li>
+              <li><Link to='/service' >Service</Link></li>
               <li><Link to='/about' >About</Link></li>
             </div>
         </div>
