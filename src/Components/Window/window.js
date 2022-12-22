@@ -5,7 +5,7 @@ import './window.css';
 export default function Window(props){
     const [clickCount, setClickCount] = useState(1)
     const OnMouseClick = () => {
-            setClickCount(clickCount+2)
+            setClickCount(props.total_count+1)
         }
     const window_style = {
         width: props.window_width,
