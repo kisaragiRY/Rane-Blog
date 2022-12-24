@@ -62,8 +62,10 @@ export default function Home() {
         padding=".5rem"
         border_thickness="3px"
         onClick={()=>{
-          let path=`/`;
-          navigate(path)}}
+          let path=`/service`
+          navigate(path)
+          window.scrollTo(0, 0)
+        }}
         >
           Learn More
       </Button>
