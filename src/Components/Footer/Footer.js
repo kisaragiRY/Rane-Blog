@@ -7,7 +7,7 @@ export default function Footer() {
   let location=useLocation();
   return (
     <div className='footer'>
-      {((location.pathname==='/') || (location.pathname==='/about')) &&
+      {((location.pathname==='/') || (location.pathname==='/about') || (location.pathname==='/service')) &&
         <div className='home-footer'>
           <div className='home-footer-left'>
             <h3>Let's Be Friends</h3>
