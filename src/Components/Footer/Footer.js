@@ -10,15 +10,9 @@ export default function Footer() {
       {((location.pathname==='/') || (location.pathname==='/about') || (location.pathname==='/service')) &&
         <div className='home-footer'>
           <div className='home-footer-left'>
-            <h3>Let's Be Friends</h3>
-            <form className='email-form'>
-                <input type='text' id='name' placeholder='name' />
-              <div>
-                <input type='email' id='email' placeholder='email'/>
-                <button>OK</button>
-              </div>
-              
-            </form>
+            <h3>Get in touch</h3>
+              <p>rane.z.blog@gmail.com</p>
+              <p>website designed・coded by Rane.Z</p>
           </div>
 
           <div className='home-footer-right'>

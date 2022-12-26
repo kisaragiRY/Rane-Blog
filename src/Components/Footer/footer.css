@@ -1,17 +1,25 @@
 .footer{
     padding: 1em 0;
-    background-color: var(--color-bg);
     text-align: center;
-    
 }
 
+.footer span{
+    display: block;
+    margin-top: 1rem;
+    color: var(--color-text);
+}
 .home-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: space-evenly; */
     margin-bottom: 2em;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: auto;
+    gap: 1rem;
 }
 .home-footer a{
     cursor: pointer;
@@ -29,33 +37,22 @@
 }
 .home-footer-left h3{
     font-size: 1.7em;
+    margin: 1rem 0;
 }
-.email-form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.home-footer-left p{
+    margin: .3rem 0;
+    letter-spacing: 1px;
+    color: var(--color-text);
+    text-transform: capitalize;
 }
-.email-form input{
-    margin-top: 1rem;
-    width: 15rem;
-}
-.email-form input, button{
-    background-color: var(--color-bg);
-    border: none;
-    border-bottom: 3px solid var(--color-text);
-}
-
 
 .home-footer-right{
     align-self: center;
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    justify-content: space-around;
     flex-wrap: wrap;
 
 }
-
-
 .home-footer-right h3{
     margin-bottom: 1rem;
 } 
@@ -64,8 +61,11 @@
 } 
 
 
-@media (min-width:50em){ 
+@media (max-width:50em){ 
     .home-footer-left{
         max-width: 24em;
+    }
+    .home-footer{
+        width: 90%;
     }
 }
