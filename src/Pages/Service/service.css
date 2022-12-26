@@ -56,6 +56,9 @@
 .service-header{
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
+.header-button{
+    margin-left: 10%;
+}
 
 .service-content{
     text-align: center;

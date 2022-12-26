@@ -118,7 +118,7 @@ export default function Service() {
                 <div className='window-header service-header'>
                     <div className='header-button'>
                         <span className='dot'></span>
-                        <span className='dot'></span>
+                        {/* <span className='dot'></span> */}
                     </div>
                     <span>service.html</span>
                 </div>
@@ -136,12 +136,12 @@ export default function Service() {
                             border_thickness="3px"
                             onClick={button_handler1}
                         >Start My Journey</Button>
-                        <Button
+                        {/* <Button
                             font_size="1rem" 
                             padding=".5rem"
                             border_thickness="3px"
                             onClick={button_handler2}
-                        >Get In Touch</Button>
+                        >Get In Touch</Button> */}
                     </div>                    
                 </div>
             </div>
