@@ -4,6 +4,7 @@ import './window.css';
 
 export default function Window(props){
     const [clickCount, setClickCount] = useState(1)
+    const dot_ref = useRef(null);
 
     var window_style = {
         width: props.window_width,
@@ -23,14 +24,19 @@ export default function Window(props){
             props.window_display("none")
         }
     }
+    useEffect(()=>{
+        if(!props.window_display){
+            dot_ref.current.style.display = "none"
+        }
+    })
     
     return(
         <Draggable>
-        <div  id={props.id} className='window-wrapper' style = {window_style} onClick={window_click_handler}>
+        <div  className='window-wrapper' style = {window_style} onClick={window_click_handler}>
             <div className='window-header' >
                 <div className='header-button'>
-                    <span className='dot' onClick={dot1_click_handler}></span>
-                    <span className='dot'></span>
+                    <span ref = {dot_ref} className='dot' onClick={dot1_click_handler}></span>
+                    {/* <span className='dot'></span> */}
                 </div>
                 <span>{props.window_name}</span>
             </div>
