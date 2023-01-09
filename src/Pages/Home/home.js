@@ -80,9 +80,9 @@ export default function Home() {
             <span>Rane's Blog</span>
             <span>Rane's Blog</span>
             <div className='quick-links-wrapper'>
-              <li ><Link to='/post' >Post</Link></li>
-              <li><Link to='/service' >Service</Link></li>
-              <li><Link to='/about' >About</Link></li>
+              <Link to='/post' >Post</Link>
+              {/* <li><Link to='/service' >Service</Link></li> */}
+              <Link to='/about' >About</Link>
             </div>
         </div>
         <div className='interface' onClick={()=>{setClickCount(clickCount+1)}}>
@@ -91,7 +91,7 @@ export default function Home() {
             window_width = '30rem'
             window_name = 'about_me.html'
             window_content = {about_me_content}
-            window_start_top = '28vw'
+            window_start_top = '10vw'
             window_start_left = '10vw'
             total_count = {clickCount}
             />
@@ -105,14 +105,14 @@ export default function Home() {
             total_count = {clickCount}
             />
 
-          <Window 
+          {/* <Window 
             window_width = '25rem'
             window_name = 'service.html'
             window_content = {service_content}
             window_start_top = '3vw'
             window_start_left = '10vw'
             total_count = {clickCount}
-            />
+            /> */}
         
         </div>
     </div>
