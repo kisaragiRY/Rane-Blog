@@ -7,7 +7,9 @@ import rehypeRaw from 'rehype-raw';
 import 'katex/dist/katex.min.css'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
-const CodeBlock= ({ inline, className, children }) => {
+
+export default function Markdown(props) {
+  const CodeBlock= ({ inline, className, children }) => {
     if (inline) {
       return <code className="inlineCode">{children}</code>;
     }
@@ -27,15 +29,13 @@ const CodeBlock= ({ inline, className, children }) => {
       ? text + child
       : React.Children.toArray(child.props.children).reduce(flatten, text)
   }
-  
+    
   function HeadingRenderer(props) {
     var children = React.Children.toArray(props.children)
     var text = children.reduce(flatten, '')
-    var id_code = Math.floor(Math.random()*10000)//text.toLowerCase().replace(/\W/g, Math.floor(Math.random()*10))
+    var id_code = Math.floor(Math.random()*100000)//text.toLowerCase().replace(/\W/g, Math.floor(Math.random()*10))
     return React.createElement('h' + props.level, {id: 'h'+ props.level+id_code}, props.children)
   }
-
-export default function Markdown(props) {
   return (
     <ReactMarkdown
     children={props.content}

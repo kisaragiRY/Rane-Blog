@@ -3,13 +3,7 @@ import '../TableOfContents/tableOfContents.css'
 import { useState,useEffect,useRef } from 'react'
 
 
-export default function TableOfContents() {
-  const headings=Array.from(document.querySelectorAll("h1,h2, h3, h4"))
-    .map((item)=>({
-    id: item.id,
-    text:item.innerText,
-    level: Number(item.nodeName.charAt(1))
-  }))
+export default function TableOfContents(props) {
 
   const getClassName = (level) => {
     switch (level) {
@@ -28,29 +22,38 @@ export default function TableOfContents() {
 
 const observer = useRef()
 const [activeId, setActiveId] = useState('')
-useEffect(() => {
-  const handleObsever = (entries) => {
-    entries.forEach((entry) => {
-      if (entry?.isIntersecting) {
-        setActiveId(entry.target.id)
-      }
-    })
-  }
-  observer.current = new IntersectionObserver(handleObsever, {
-    rootMargin: "-30% 0% -35% 0px"}
-  )
 
-  const elements = document.querySelectorAll("h1,h2, h3,h4")
-  elements.forEach((elem) => observer.current.observe(elem))
-  return () => observer.current?.disconnect()
+const elements = props.elements
+useEffect(() => {
+  // console.log(elements) 
+  // const handleObsever = (entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry?.isIntersecting) {
+  //       setActiveId(entry.target.id)
+  //     }
+  //   })
+  // }
+  // observer.current = new IntersectionObserver(handleObsever, {
+  //   rootMargin: "-30% 0% -35% 0px"}
+  // )
+
+  // elements.forEach((elem) => observer.current.observe(elem))
+  // return () => {
+  //   observer.current?.disconnect();
+  // }
 })
+const headings = Array.from(elements).map((item)=>({
+  id: item.id,
+  text:item.innerText,
+  level: Number(item.nodeName.charAt(1))
+}))
  
   return (
     <nav className='toc'>
       <p>目录</p>
       <ul>
-        {/* {console.log(headings)} */}
-        {headings.map(heading=>(
+        {console.log(headings)}
+        {/* {headings.map(heading=>(
             <li key={heading.id} className={getClassName(heading.level)}>
                 <a href={`#${heading.id}`}
                     onClick={(e)=>{
@@ -66,7 +69,7 @@ useEffect(() => {
                   {heading.text}</a>
             </li>
           ))
-        } 
+        }  */}
       </ul>
     </nav> 
   )  
