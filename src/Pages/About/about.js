@@ -36,14 +36,14 @@ export default function About() {
   return (
     <div className='about-container'>
       <div className='about-window'>
-        <div className='about-header'>
-          <span>
-            <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671362504/raneblog.com/circle_ktldki.svg' />
-            <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671362504/raneblog.com/circle_ktldki.svg' />
-          </span>
+        <div className='window-header'>
+          <div className='header-button'>
+            <span className='dot'></span>
+            <span className='dot'></span>
+          </div>
           <span>about.html</span>
         </div>
-        <div className='about-content'>
+        <div className='window-content about-content'>
           <h1>Hello, there</h1>
           <h2>who are you ?</h2>
           <p>
