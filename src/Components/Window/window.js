@@ -31,8 +31,8 @@ export default function Window(props){
     })
     
     return(
-        <Draggable>
-        <div  className='window-wrapper' style = {window_style} onClick={window_click_handler}>
+        <Draggable onDrag={window_click_handler}>
+        <div  className='window-wrapper' style = {window_style}>
             <div className='window-header' >
                 <div className='header-button'>
                     <span ref = {dot_ref} className='dot' onClick={dot1_click_handler}></span>
