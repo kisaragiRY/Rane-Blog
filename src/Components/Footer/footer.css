@@ -9,17 +9,17 @@
     color: var(--color-text);
 }
 .home-footer{
-    /* display: flex;
-    flex-direction: row; */
-    /* justify-content: space-evenly; */
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
     margin-bottom: 2em;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     text-align: left;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     width: 60%;
     margin: auto;
-    gap: 1rem;
+    gap: 2rem;
 }
 .home-footer a{
     cursor: pointer;
@@ -49,9 +49,9 @@
 .home-footer-right{
     align-self: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-
+    gap: 3em;
 }
 .home-footer-right h3{
     margin-bottom: 1rem;
