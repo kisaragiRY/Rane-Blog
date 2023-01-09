@@ -28,10 +28,12 @@ export default function Window(props){
         if(!props.window_display){
             dot_ref.current.style.display = "none"
         }
+        
     })
+
     
     return(
-        <Draggable onDrag={window_click_handler}>
+        <Draggable onDrag={window_click_handler} disabled={props.drag}>
         <div  className='window-wrapper' style = {window_style}>
             <div className='window-header' >
                 <div className='header-button'>
