@@ -1,5 +1,4 @@
 import React,{useEffect, useState,useRef} from 'react'
-import Markdown from '../../Components/Markdown/Markdown'
 import emailjs from '@emailjs/browser';
 import './about.css'
 
@@ -36,75 +35,70 @@ export default function About() {
 
   return (
     <div className='about-container'>
-      <div className='about-title'>
-        <span>About Me</span>
-      </div>
-      <div className='about-me-faq'>
-        {/* <div className='about-markdown'>
-          <Markdown content={post} />
-        </div> */}
-        <div className='que-ans'>
-          <p className='que'>Who are you?</p>
-          <p className='ans'>
-              My name is Rane, currently a DS master student,  
-              studying machine learning and
-              statistical learning.
+      <div className='about-window'>
+        <div className='about-header'>
+          <span>
+            <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671362504/raneblog.com/circle_ktldki.svg' />
+            <img src='https://res.cloudinary.com/kisaragiry/image/upload/v1671362504/raneblog.com/circle_ktldki.svg' />
+          </span>
+          <span>about.html</span>
+        </div>
+        <div className='about-content'>
+          <h1>Hello, there</h1>
+          <h2>who are you ?</h2>
+          <p>
+            My name is Kisaragi. 
+            You can also call me Rane if that’s easier for you.
+          </p>
+          <p>
+            I’m a data scientist, 
+            specialized in statistical learning and machine learning. 
+            My research and job involve neuroscience and computer vision.
           </p>
 
-          <p className='que'>What is this website about?</p>
-          <p className='ans'>
-                This blog is where I write about about Math, 
-                Statistics, Machine Learning and share some random stuff.
+          <h2>what is this website ?</h2>
+          <p>
+          This is my personal website where I write tech blogs and 
+          offer services that include data analysis and web design/development. 
+          </p>
+          <p>
+          If you have anything else that you think I can help you with. 
+          Drop me an email at <u>_rane.z.blog@gmail.com_</u>. 
           </p>
 
-          <p className='que'>What are you busy with recently?</p>
-          <p className='ans'>
-                I'm in the last year of my master program. School stuff is 
-                my priority. My research is about the application of machine learning and 
-                statistical learning in Neuroscience &#129504;.
-              <br/> 
-              On the side, I write blogs, furnishing my website, learning French 🇫🇷 and
-                working as an intern in a startup based here in Kyoto, Japan &#9961;.
-          </p>
+          <h2>what are you busy with recently ?</h2>
+          <p>
+            My priority right now is the research I've been working on for the past two years.
+            To put it simply, it's about the application of machine learning and 
+            statistical learning in neuroscience &#129504;. The project related
+            code is uploaded <a 
+                href='https://github.com/kisaragiRY/decoding-DG' 
+                target="_blank" 
+                rel="noreferrer">
+                   <u>_here_</u>
+              </a>.
 
-          <p className='que'>What do you do for fun &#x1F60B;?</p>
-          <p className='ans'>
-                Enjoy Sushi &#127843; and occasionally
-                do pixel art 🧑‍🎨 on <a rel="noreferrer" target="_blank" href='https://www.instagram.com/kisaragi.z/'>instagram</a>.
           </p>
-
-          <p className='que'>How do I contact you?</p>
-          <p className='ans'>
-                If you have questions about the blogs, and want to have further discussions, 
-                you can write emails to rane.z.blog@gmail.com.
+          <p>
+          On the side, I'm also working on developing this <a 
+            href='https://github.com/kisaragiRY/Rane-Blog' 
+            target="_blank" 
+            rel="noreferrer">
+                <u>_website_</u>
+          </a>
+          , 
+          learning Arabic and posting "study with me" video to <a 
+                href='https://www.youtube.com/channel/UCxyic1BkqjQHIb1nuxpAOeg' 
+                target="_blank" 
+                rel="noreferrer">
+                   <u>_YouTube_</u></a>.
           </p>
           
         </div>
 
-        {/* <div className='contact-form'>
-          <div className="contact-header"> contact me</div>
-
-            <form className="contact-body" ref={form} onSubmit={sendEmail}>
-              <input name="name" type="text" className="contact-body__name" required placeholder="Name"/>
-              <input name="email" type="email" className="contact-body__email" placeholder="Email" />
-              <select name='Continent' className="contact-body__continent">
-                <option value="">--Please choose a place where you are from--</option>
-                <option>Africa</option>
-                <option>Antarctica</option>
-                <option>Asia</option>
-                <option>Australia</option>
-                <option>Europe</option>
-                <option>North America</option>
-                <option>South America</option>
-              </select>
-              <textarea name='message' type="text" className="contact-body__message" placeholder="Message" required></textarea>
-              <button value="Send" className="contact-body__submit" type="submit">SEND</button>
-              <span className={Msent?'sent-message active':'sent-message'}>Thank you, message sent!</span>
-
-            </form>
-          </div> */}
+            
+      
       </div>
-
     </div>
   )
 }

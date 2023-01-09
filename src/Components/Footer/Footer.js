@@ -7,26 +7,29 @@ export default function Footer() {
   let location=useLocation();
   return (
     <div className='footer'>
-      {((location.pathname==='/') || (location.pathname==='/about')) &&
+      {((location.pathname==='/') || (location.pathname==='/about') || (location.pathname==='/service')) &&
         <div className='home-footer'>
           <div className='home-footer-left'>
-            <h3>Rane's blog</h3>
-            <p>This is Rane's blog website where she writes about 
-              Math, Statistics, Machine Learning and other thoughts that come along.</p>
+            <h3>Get in touch</h3>
+              <p>rane.z.blog@gmail.com</p>
+              <p>website designed・coded by Rane.Z</p>
           </div>
 
           <div className='home-footer-right'>
-            <div className='contact'>
-              <h3>get in touch</h3>
-              <p><a href='https://www.instagram.com/kisaragi.z/' target="_blank" rel="noreferrer">instagram</a></p>
-              <p><a href='https://github.com/kisaragiRY' target="_blank" rel="noreferrer">github</a></p>
-            </div>
-
             <div className='nav'>
               <h3>explore</h3>
               <p><Link to='/post'>Post</Link></p>
+              <p><Link to='/service'>Service</Link></p>
               <p><Link to='/about'>About</Link></p>
             </div>
+
+            <div className='contact'>
+              <h3>find me</h3>
+              <p><a href='https://www.youtube.com/channel/UCxyic1BkqjQHIb1nuxpAOeg' target="_blank" rel="noreferrer">YouTube</a></p>
+              <p><a href='https://www.instagram.com/kisaragi.z/' target="_blank" rel="noreferrer">Instagram</a></p>
+              <p><a href='https://github.com/kisaragiRY' target="_blank" rel="noreferrer">GitHub</a></p>
+            </div>
+
           </div>
         </div>
       }

@@ -1,43 +1,74 @@
-.home-quote{
-    width:100%;
-    margin: auto;
-    padding: 150px 0;
-    background-color: var(--color-red);
-    /* border-bottom: solid 1px; */
+.home-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: stretch; */
+    /* justify-items: stretch; */
+    /* align-items: stretch; */
 }
-.home-quote span{
+
+.home-intro{
+    background-color: var(--color-bg);
+    border-bottom: 4px solid var(--color-text);
+}
+.home-intro span{
     font-family: 'Bungee Outline', cursive;
-    font-size: 60px;
-    /* font-weight: 600; */
-    letter-spacing: 2px;
-    margin: auto;
+    font-size: 60px; 
+    font-weight: 600;
+     letter-spacing: 2px;
     text-align: right;
-    background: -webkit-linear-gradient(100deg,var(--color-bg), var(--color-red));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     display: block;
-    width: 80%;
+    margin-right: 2rem;
+    padding-top: 2rem;
+} 
+
+.quick-links-wrapper{
+    list-style: none;
+    border-top: 4px solid var(--color-text);
+    border-bottom: 4px solid var(--color-text);
+    border-left: 4px solid var(--color-text);
+    width: 60%;
+    margin: auto;
+    position: relative;
+    bottom: -1rem;
+    background-color: var(--color-grey);
+    z-index: 99;
 }
+.quick-links-wrapper li{
+    display: inline-block;
+    padding: .5em .3em;
+    width: 33.3%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-right: 5px solid var(--color-text);
+}
+
+.quick-links-wrapper li:hover{
+    background-color: var(--color-red);
+}
+
+.interface{
+    background-color: var(--color-grey);
+    background-image: url("/src/Assets/Dots\ 8px.png");
+    min-height: 40rem;
+    border-bottom: 4px solid var(--color-text);
+    overflow: hidden;
+    position: relative;
+}
+
 .recent-article{
     margin: auto;
-    padding: 3em;
-    /* width: 95%; */
-    /* border: solid 2px; */
-    /* border: 3px solid #333333;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%; */
+    width: 80%;
 }
 
 .list-container{
-    /* width: 95%; */
-    margin: 30px auto;
-    /* padding: 0 3em; */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: flex-start;
     gap: 1em;
 }
 .article-card{
-    /* display: flex; */
     position: relative;
 
 }
@@ -58,66 +89,43 @@
     
 }
 .article-card div:nth-child(2) a{
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
-@media (max-width: 551.98px){ 
-    .recent-article{
-        width: 90%;
-    }
-
-    .article-card{
-        /* min-height: 60px; */
-        max-width: 100%;
-        flex-basis: 100%;
-        flex-grow: 0;
-    }
+.bio{
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
 }
- @media (min-width: 552px) and (max-width: 727.98px){
-    .recent-article{
-        width: 90%;
-    }
-
-    .article-card{
-        min-height: 60px;
-        max-width: 45%;
-        flex-basis: 45%;
-        flex-grow: 0;
-    }
+.icon{
+    position: relative;
+    top: .5rem;
+    margin-right: .5rem ;
 }
-
-@media (min-width: 728px) and (max-width: 903.98px){
-    .recent-article{
-        width: 85%;
-    }
-
-    .article-card{
-        min-height: 60px;
-        max-width: 45%;
-        flex-basis: 45%;
-        flex-grow: 0;
-    }
+.bio img:nth-child(1){
+    filter: gray;
+    -webkit-filter: grayscale(60%)
+}
+.bio img:nth-child(1):hover{
+    filter: gray;
+    -webkit-filter: grayscale(0);
+}
+.bio span:nth-child(1){
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
-@media (min-width: 904px) and (max-width: 1079.98px){
-    .recent-article{
-        width: 78%;
-    }
-    .article-card{
-        min-height: 60px;
-        max-width: 45%;
-        flex-basis: 45%;
-        flex-grow: 0;
-    }
+.home-service{
+    text-align: center;
+    padding: 1.5rem;
+}
+.home-service span{
+    display: block;
+    margin: 1rem 0;
 }
 
-@media (min-width: 1080px){
-    .recent-article{
-        width: 70%;
-    }
-    .article-card{
-        min-height: 60px;
-        max-width: 45%;
-        flex-basis: 45%;
-        flex-grow: 0;
+@media (max-width:35em){
+    .quick-links-wrapper li{
+        font-size: .8rem;
     }
 }
