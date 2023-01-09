@@ -14,7 +14,7 @@ export default function Post() {
 
   let location=useLocation();
   let navigate=useNavigate();
-  let {tag,blog_id}=useParams(); //parameters from url
+  let {tag}=useParams(); //parameters from url
 
   return (
     <div>
@@ -72,10 +72,6 @@ export default function Post() {
           </div>
         </div>
       </div>}
-
-      {/* post detail page */}
-      {location.pathname===`/post/${blog_id}`&&<PostDetail blog_id={blog_id}/>}
-        
       
     </div>
   )
