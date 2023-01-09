@@ -19,7 +19,6 @@ export default function Footer() {
             <div className='nav'>
               <h3>explore</h3>
               <p><Link to='/post'>Post</Link></p>
-              <p><Link to='/service'>Service</Link></p>
               <p><Link to='/about'>About</Link></p>
             </div>
 
@@ -33,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
       }
-      <span>Copyright © 2022 Rane.Z</span>
+      <span>Copyright © 2022 - 2023 Rane.Z</span>
     </div>
   
   )

@@ -34,10 +34,10 @@
     background-color: var(--color-grey);
     z-index: 99;
 }
-.quick-links-wrapper li{
+.quick-links-wrapper a{
     display: inline-block;
     padding: .5em .3em;
-    width: 33.3%;
+    width: 50%;
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
@@ -95,6 +95,8 @@
     margin: 1rem;
     display: flex;
     justify-content: space-around;
+    gap: .8em;
+    flex-wrap: wrap;
     
 }
 .icon{
@@ -113,15 +115,7 @@
 .bio span:nth-child(1){
     font-size: 2rem;
     margin: 1rem 0;
-}
-
-.home-service{
-    text-align: center;
-    padding: 1.5rem;
-}
-.home-service span{
-    display: block;
-    margin: 1rem 0;
+    overflow-wrap: break-word;
 }
 
 @media (max-width:35em){
