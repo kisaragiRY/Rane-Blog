@@ -22,9 +22,13 @@ export default function TableOfContents(props) {
 
 const observer = useRef()
 const [activeId, setActiveId] = useState('')
+// const [elements, setElements] = useState([])
+const [headings, setHeadings] = useState([])
 
-const elements = props.elements
+const elements = document.querySelectorAll("h1,h2") //props.elements
+
 useEffect(() => {
+  // setElements(document.querySelectorAll("h1,h2"))
   // console.log(elements) 
   // const handleObsever = (entries) => {
   //   entries.forEach((entry) => {
@@ -41,18 +45,17 @@ useEffect(() => {
   // return () => {
   //   observer.current?.disconnect();
   // }
-})
-const headings = Array.from(elements).map((item)=>({
-  id: item.id,
-  text:item.innerText,
-  level: Number(item.nodeName.charAt(1))
-}))
+  const elements = Array.from(document.querySelectorAll("h1, h2"))
+      .map((element) => element.innerText);
+    setHeadings(elements);
+}, [])
  
   return (
+    
     <nav className='toc'>
       <p>目录</p>
       <ul>
-        {console.log(headings)}
+        {/* {console.log(headings)} */}
         {/* {headings.map(heading=>(
             <li key={heading.id} className={getClassName(heading.level)}>
                 <a href={`#${heading.id}`}

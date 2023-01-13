@@ -14,13 +14,14 @@ export default function PostDetail() {
     let {blog_id}=useParams(); // will re-render again
     const file_name=atob(blog_id)
     const [post,setPost]=useState('')
-    const [markdownContent, setMarkdown] = useState(null)
+    // const [markdownContent, setMarkdown] = useState(null)
     // setElement(document.querySelectorAll("h1, h2, h3, h4")) 
     let navigate=useNavigate();
     const [loadHeadings, setLoad] = useState(false)
 
     const blog=blog_id_to_blog(blogs,file_name)[0]
     // console.log(document.querySelectorAll("h1,h2"))
+    const markdownContent = <Markdown className='markdown' content={post}/>
 
     useEffect(()=>{
         import(`../../Blogs/Posts/${file_name}`)
@@ -29,14 +30,9 @@ export default function PostDetail() {
                 .then(res=>res.text())
                 .then(res=>setPost(res))
             })
-            .catch(err=>console.log(err));
+            // .catch(err=>console.log(err));
             
-        setMarkdown(<Markdown className='markdown' content={post}/>)
-        })
-    // const markdownContent = (<Markdown className='markdown' content={post}/>)
-    useEffect(()=>{
-        setLoad(true)
-    }, [loadHeadings])
+        },[])
   return (
     <div className='post-wrapper'>
         {/* {console.log(blog_id_to_blog(blogs,file_name)[0].title)} */}
@@ -55,17 +51,11 @@ export default function PostDetail() {
         </div>
         <div className='post-content'>
             <div className='post-detail'>
-                {/* <Markdown className='markdown' content={post}/> */}
-                {markdownContent}
-                {/* {setLoad(true)} */}
+                {<Markdown className='markdown' content={post}/>}
+                {/* {markdownContent} */}
             </div>
             {/* {console.log(document.querySelectorAll("h1,h2"))} */}
-            {loadHeadings&&<TableOfContents
-                elements = {document.querySelectorAll("h1,h2")}
-            />}
-            {console.log(loadHeadings)}
-            {/* <TableOfContents
-                elements = {document.querySelectorAll("h1,h2")}/> */}
+            {/* <TableOfContents/> */}
         </div>
 
     </div>
