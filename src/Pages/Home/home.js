@@ -71,10 +71,7 @@ export default function Home() {
   return (
     <div className='home-wrapper'>
         <div className='home-intro'>
-            <span>Rane's Blog</span>
-            <span>Rane's Blog</span>
-            <span>Rane's Blog</span>
-            <span>Rane's Blog</span>
+            <span>A Blog</span>
             <div className='quick-links-wrapper'>
               <Link to='/post' >Post</Link>
               {/* <li><Link to='/service' >Service</Link></li> */}
