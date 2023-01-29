@@ -30,11 +30,12 @@
   margin: 1rem 0;
   line-height: 1.5rem;
   letter-spacing: .05rem;
+  word-spacing: .1rem;
 }
 
 @media (max-width:35em){
   .about-content{
-    margin: .5rem;
+    margin: 1.8rem;
     overflow-wrap: break-word;
   }
   .about-window{

@@ -47,22 +47,23 @@ export default function About() {
           <h1>Hello, there</h1>
           <h2>who are you ?</h2>
           <p>
-            My name is Kisaragi. 
-            You can also call me Rane if that’s easier for you.
+            I'm Kisaragi. 
+            My friends also call me Rane in the English context.
           </p>
           <p>
-            I’m a data scientist, 
-            specialized in statistical learning and machine learning. 
-            My research and job involve neuroscience and computer vision.
+            I work as a data scientist.
+            I specialize in statistics and machine learning. 
+            My research and job involve in neuroscience and some computer vision.
           </p>
 
           <h2>what is this website ?</h2>
           <p>
-          This is my personal website where I write tech blogs and 
-          offer services that include data analysis and web design/development. 
+          This is my personal website which I designed and developed from scratch since 2020. 
+          </p>
+          <p>This is where I write tech blogs and some random thoughts.  
           </p>
           <p>
-          If you have anything else that you think I can help you with. 
+          I also offer services that include data analysis and web design / development. If you have anything else that you think I can help you with. 
           Drop me an email at <u>_rane.z.blog@gmail.com_</u>. 
           </p>
 
@@ -80,14 +81,14 @@ export default function About() {
 
           </p>
           <p>
-          On the side, I'm also working on developing this <a 
+          On the side, I'm constantly updating this <a 
             href='https://github.com/kisaragiRY/Rane-Blog' 
             target="_blank" 
             rel="noreferrer">
                 <u>_website_</u>
           </a>
           , 
-          learning Arabic and posting "study with me" video to <a 
+          learning Arabic and posting "study with me" videos to <a 
                 href='https://www.youtube.com/channel/UCxyic1BkqjQHIb1nuxpAOeg' 
                 target="_blank" 
                 rel="noreferrer">
