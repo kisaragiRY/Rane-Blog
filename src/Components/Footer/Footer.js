@@ -12,7 +12,7 @@ export default function Footer() {
           <div className='home-footer-left'>
             <h3>Get in touch</h3>
               <p>rane.z.blog@gmail.com</p>
-              <p>website designed・coded by Rane.Z</p>
+              <p>website designed・developed by Rane.Z</p>
           </div>
 
           <div className='home-footer-right'>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
       }
-      <span>Copyright © 2022 - 2023 Rane.Z</span>
+      <span>Copyright © 2020 - 2023 Rane.Z</span>
     </div>
   
   )
