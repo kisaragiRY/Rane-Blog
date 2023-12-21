@@ -10,9 +10,8 @@ export default function Navbar() {
     const toggleClass=()=>{
         setActive(!isActive);
     }
-
   return (
-    <NavWrapper isHomePage={true}>
+    <NavWrapper isHomePage={location.pathname==="/"? true : false}>
         <div className='navbar-logo'>
             <Link to='/'>Home</Link>
         </div>
