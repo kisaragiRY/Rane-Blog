@@ -1,4 +1,4 @@
-.navbar-container{
+/* .navbar-container{
     top: 0;
     width: 100%;
     background-color: var(--color-grey);
@@ -12,14 +12,13 @@
     align-items: center;
     font-size: 1.5rem;
 
-}
-.navbar-logo{
+} */
+/* .navbar-logo{
     padding: .2em 1em;
 }
 .navbar-menu-links{
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-start; */
 }
 
 .navbar-menu-links a{
@@ -32,7 +31,7 @@
     background-color: var(--color-red);
     border-left: 4px solid var(--color-text);
     border-right: 4px solid var(--color-text);
-}
+} */
 /* hamburger related style*/
 .hamburger{
     display: none;
