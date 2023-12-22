@@ -25,6 +25,24 @@
     display: flex;
 }
 
+.post-content h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.post-content h1::after {
+    position: absolute;
+    content: " ";
+    background-color: var(--color-red);
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    left: -2%;
+    bottom: 0;
+    opacity: .7;
+    z-index: -1;
+}
+
 @media (max-width:70em){
     .post-wrapper{
         width: 80%;
