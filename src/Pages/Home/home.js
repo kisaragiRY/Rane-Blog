@@ -54,7 +54,7 @@ export default function Home() {
         </section>
         <section>
         <div className='homebox-wrapper recent-article'>
-          <p>Latest Posts</p>
+          <p><Link to="/post">Latest Posts</Link></p>
           <div className='list-container'>
             {sort_json(blogs).slice(0,4).map((article,key)=>
             <div key={key} className='article-card'>
