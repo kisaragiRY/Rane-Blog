@@ -29,6 +29,7 @@ export default function PostCard(props) {
             (tag!=='')&&
                     <TagButton 
                       key={key} 
+                      bgColor={"red"}
                       padding={"1px 5px"}
                       font_size={"12px"} 
                       onClick={()=>{

@@ -23,7 +23,7 @@ export default function Post() {
             {
               (TAG_LIST).map((tag,key)=>
                 <TagButton key={key} 
-                        margin=".8em"
+                        margin=".5em .8em"
                         padding={".3em .3em"}
                         font_size={"1em"} 
                         onClick={()=>{
