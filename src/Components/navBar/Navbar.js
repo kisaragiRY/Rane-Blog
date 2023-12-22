@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { useLocation,Link } from 'react-router-dom'
-import './navbar.css'
+import './hamburger.css'
 import { NavWrapper } from './NavWrapper.style';
 
 export default function Navbar() {
@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className='navbar-logo'>
             <Link to='/'>Home</Link>
         </div>
-        <div className='navbar-menu-links' >
+        <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'} onClick={toggleClass}>
             <Link to='/works'>works</Link>
             <Link to='/post'>post</Link>
             <Link to='/about'>about</Link>
