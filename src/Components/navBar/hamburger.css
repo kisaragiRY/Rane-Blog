@@ -7,7 +7,7 @@
     border: none;
     cursor: pointer;
     background: none;
-    margin-right: 1.5rem;
+    /* margin-right: 1.5rem; */
 }
 .hamburger span{
     display: block;
@@ -36,25 +36,5 @@
 @media (max-width:900px){
     .hamburger{
         display: block;
-    }
-    
-    .navbar-menu-links.is-active{
-        position: fixed;
-        inset: 0 0 0 0;
-        display: flex;
-        flex-direction: column;
-        font-size: 1rem;
-        padding: 40% 0% 60% 35%;
-        width: 100%;
-        font-size: 1.7em;
-        background-color: var(--color-bg);
-        text-align: right;
-    }
-    .navbar-menu-links.is-active a{
-        border: none;
-    }
-    .navbar-menu-links.is-active a:hover{
-        border: none;
-        background-color: transparent;
     }
 }
