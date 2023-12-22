@@ -35,30 +35,27 @@ export const NavWrapper = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .navbar-menu-links a {
-        margin: 0 2em;
+        width: 40%
     }
 
     @media (max-width:900px) {
         font-size: 1.7em;
         .navbar-menu-links{
-            visibility: hidden;
-            transition: visibility 0s, opacity 0.5s linear;
+            width: 100%;
+            display: none;
         }
         .navbar-menu-links.is-active{
             position: fixed;
             inset: 0 0 0 0;
-            visibility: visible;
             display: flex;
             flex-direction: column;
             font-size: 1rem;
             font-size: 1.7em;
-            text-align: right;
-        }
-        .navbar-menu-links.is-active a{
-            padding: .5em;
+            text-align: center;
+            justify-content: space-around;
+            padding: 3em 0;
+
+            background-color: #FFFAF8;
         }
     }
 `
