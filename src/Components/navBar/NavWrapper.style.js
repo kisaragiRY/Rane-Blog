@@ -11,7 +11,8 @@ export const NavWrapper = styled.div`
     z-index: 1000;
     align-items: center;
     font-size: 1.5rem;
-    padding: 4em 10% 1em 10%;
+    padding: ${(props) => (props.isHomePage ? '4em 10% 1em 10%': '1em 10% .5em 10%') };
+    border-bottom: ${(props) => (props.isHomePage ? 'none': 'solid 2px black') };
     font-weight: bold;
     
     a {

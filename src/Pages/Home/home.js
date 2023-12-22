@@ -1,17 +1,19 @@
 import React, {useEffect, useState} from 'react'
-import { sort_json } from '../../Helpers/utils'
-import blogs from '../../Blogs/blogs.json'
 import { Link } from 'react-router-dom';
+import { BsYoutube, BsInstagram, BsGithub } from "react-icons/bs";
 
+import { sort_json } from '../../Helpers/utils'
+import { useTransitionNavigate } from '../../Helpers/Transition/useTransitionNavigate';
+import blogs from '../../Blogs/blogs.json'
 import './home.css'
 import './profileimg.css'
 import './recent-article.css'
 import './currenttime.css'
 
-import { BsYoutube, BsInstagram, BsGithub } from "react-icons/bs";
 
 export default function Home() {
   const [date, setDate] = useState(new Date());
+  const { transitionNavigate } = useTransitionNavigate();
 
   useEffect(()=>{
     var timer = setInterval(()=>setDate(new Date()), 1000 )
@@ -41,11 +43,11 @@ export default function Home() {
 
       <section className='home-right'>
         <section>
-          <Link to='/about'>
+          <a onClick={() => transitionNavigate("/about", "slide-to-right")}>
             <div className='homebox-wrapper profileimg'>
               <p>Isra</p>
             </div>
-          </Link>
+          </a>
           <div className='homebox-wrapper currenttime'>
             <p>{date.getHours() + " : " + date.getMinutes()}</p>
             <p>GMT + 9</p>
@@ -54,7 +56,7 @@ export default function Home() {
         </section>
         <section>
         <div className='homebox-wrapper recent-article'>
-          <p><Link to="/post">Latest Posts</Link></p>
+          <p><a onClick={() => transitionNavigate("/post", "slide-to-right")}>Latest Posts</a></p>
           <div className='list-container'>
             {sort_json(blogs).slice(0,4).map((article,key)=>
             <div key={key} className='article-card'>
