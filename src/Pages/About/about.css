@@ -2,7 +2,8 @@
   border-bottom: 4px solid var(--color-text);
   background-color: var(--color-grey);
   background-image: url("/src/Assets/Dots\ 8px.png");
-  padding: 8rem 0;
+  padding: 8vw;
+  z-index: -2;
 }
 .about-window{
   width: 80%;
@@ -23,6 +24,21 @@
 .about-content h2{
   font-size: 2rem;
   margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-content h2::before {
+  position: absolute;
+  content: " ";
+  background-color: var(--color-red);
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  left: -2%;
+  bottom: 0;
+  opacity: .7;
+  z-index: -1;
 }
 
 .about-content p{
