@@ -6,7 +6,7 @@ import { blog_id_to_blog } from '../../Helpers/utils'
 import 'katex/dist/katex.min.css'
 import Markdown from '../../Components/Markdown/Markdown'
 import "../../Components/Markdown/markdown.css"
-import { Button } from '../../Components/Button/Button.style'
+import { TagButton } from '../../Components/Button/TagButton.style'
 import { useNavigate} from 'react-router-dom'
 import TableOfContents from '../../Components/TableOfContents/tableOfContents'
 
@@ -40,13 +40,13 @@ export default function PostDetail() {
             <span>{blog.title}</span>
             <span>{blog.creat_time}</span>
             {(blog.tag).map((tag,key)=>
-            <Button key={key} 
+            <TagButton key={key} 
                     padding={".1em .3em"}
                     font_size={".8em"} 
                     onClick={()=>{
                       let path=`/post/tag/${tag}`;
                       navigate(path)}}>{tag}
-            </Button>
+            </TagButton>
             )}
         </div>
         <div className='post-content'>
