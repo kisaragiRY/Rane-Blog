@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useLocation,Link } from 'react-router-dom'
-import './navbar.css'
+import './hamburger.css'
+import { NavWrapper } from './NavWrapper.style';
 
 export default function Navbar() {
     const location=useLocation();
@@ -9,23 +10,23 @@ export default function Navbar() {
     const toggleClass=()=>{
         setActive(!isActive);
     }
-
   return (
-    <div className='navbar-container'>
-    
+    <NavWrapper isHomePage={location.pathname==="/"? true : false}>
         <div className='navbar-logo'>
             <Link to='/'>Home</Link>
         </div>
-        <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'} >
-            <Link to='/post'   onClick={()=>{setActive(!isActive);}}>Post</Link>
-            <Link to='/about' onClick={()=>{setActive(!isActive);}}>About</Link>
+        <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'} onClick={toggleClass}>
+            <Link to='/works'>works</Link>
+            <Link to='/post'>post</Link>
+            <Link to='/about'>about</Link>
         </div>
         <button className={isActive?'hamburger is-active':'hamburger'} onClick={toggleClass}>
             <span></span>
             <span></span>
             <span></span>
         </button>
+    </NavWrapper>
+    
 
-    </div>
   )
 }
