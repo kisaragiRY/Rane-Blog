@@ -40,4 +40,25 @@ export const NavWrapper = styled.div`
     .navbar-menu-links a {
         margin: 0 2em;
     }
+
+    @media (max-width:900px) {
+        font-size: 1.7em;
+        .navbar-menu-links{
+            visibility: hidden;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+        .navbar-menu-links.is-active{
+            position: fixed;
+            inset: 0 0 0 0;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            font-size: 1.7em;
+            text-align: right;
+        }
+        .navbar-menu-links.is-active a{
+            padding: .5em;
+        }
+    }
 `
