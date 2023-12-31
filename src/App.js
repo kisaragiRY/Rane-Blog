@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from 'react-router-dom';
-import {Home,Post,About,Error,Service, PostDetail} from './Pages';
+import {Home,Post,About,Error, PostDetail, Works} from './Pages';
 import RootLayout from './Layouts/RootLayout';
 
 
@@ -18,7 +18,7 @@ const router  = createBrowserRouter(
       <Route path= '/post/' element={<Post/>}/>
       <Route path='/post/tag/:tag' element={<Post/>}/>
       <Route path= '/post/:blog_id' element={<PostDetail/>}/>
-      <Route path= '/service' element={<Service/>}/>
+      <Route path='/works' element={<Works/>} />
       <Route path= '/about' element={<About/>}/>
     </Route>
   )

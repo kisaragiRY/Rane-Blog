@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './postcard.css'
-import { Button } from '../Button/Button.style'
+import { TagButton } from '../Button/TagButton.style'
 import { useNavigate,Link} from 'react-router-dom';
 
 export default function PostCard(props) {
@@ -27,17 +27,16 @@ export default function PostCard(props) {
         <span>{props.date}</span>
         {(props.tags.map((tag,key)=>
             (tag!=='')&&
-                    <Button 
+                    <TagButton 
                       key={key} 
+                      bgColor={"red"}
                       padding={"1px 5px"}
                       font_size={"12px"} 
                       onClick={()=>{
                           let path=`/post/tag/${tag}`;
                           navigate(path)}}>{tag}
-                    </Button>
+                    </TagButton>
         ))}
-        
-
     </div>
 
   )

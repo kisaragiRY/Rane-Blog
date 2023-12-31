@@ -1,0 +1,40 @@
+/* hamburger related style*/
+.hamburger{
+    display: none;
+    position: relative;
+    /* z-index: 1; */
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+    /* margin-right: 1.5rem; */
+}
+.hamburger span{
+    display: block;
+    width: 2em;
+    height: .4em;
+    margin-bottom: .2em;
+    position: relative;
+    background-color: var(--color-text);
+    transform-origin: 0 0;
+    transition: .4s;
+}
+
+.hamburger:hover span:nth-child(2){
+    transform: translateX(.8em);
+}
+
+.hamburger.is-active span:nth-child(1){
+    transform: translate(0,-.1em) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.is-active span:nth-child(3){
+    transform: translate(-.1em,.1em) rotate(-45deg);
+}
+@media (max-width:900px){
+    .hamburger{
+        display: block;
+    }
+}
