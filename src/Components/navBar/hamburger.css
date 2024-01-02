@@ -8,6 +8,7 @@
     cursor: pointer;
     background: none;
     /* margin-right: 1.5rem; */
+    z-index: 99;
 }
 .hamburger span{
     display: block;

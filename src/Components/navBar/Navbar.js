@@ -22,7 +22,7 @@ export default function Navbar() {
         </div>
         <div className={isActive?'navbar-menu-links is-active':'navbar-menu-links'} onClick={toggleClass}>
             <a onClick={() => transitionNavigate("/works", "slide-to-right")}>works</a>
-            <a onClick={() => transitionNavigate("/post", "slide-to-right")}>post</a>
+            {/* <a onClick={() => transitionNavigate("/post", "slide-to-right")}>post</a> */}
             <a onClick={() => transitionNavigate("/about", "slide-to-right")}>about</a>
 
         </div>

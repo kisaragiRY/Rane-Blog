@@ -17,6 +17,7 @@ export const NavWrapper = styled.div`
     
     a {
         position: relative;
+        margin: 0 1em;
     }
     a::after {
         content: " ";
@@ -35,8 +36,8 @@ export const NavWrapper = styled.div`
     .navbar-menu-links {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 40%
+        justify-content: space-around;
+        /* width: 40% */
     }
 
     @media (max-width:900px) {
@@ -57,6 +58,12 @@ export const NavWrapper = styled.div`
             padding: 3em 0;
 
             background-color: #FFFAF8;
+            z-index: 99;
         }
+
+        a::after {
+            display: none;
+        }
+
     }
 `
