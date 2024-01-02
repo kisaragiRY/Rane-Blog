@@ -26,7 +26,7 @@ transition: all .4s ease;
 
 // the title
 & h1{
-    font-size: 2em;
+    font-size: 1.8em;
     display: block;
     font-weight: bold;
 }

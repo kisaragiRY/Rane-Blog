@@ -8,6 +8,12 @@ Every time when I see a cool design, I just can’t help applying that to my own
 <br/>It’s a static website using React as the framework and deployed to aws s3 for hosting.
 </p>
 
+const projectIntro_dentate = 
+<p>
+    This was a master research project which includes processing neural data and modeling.
+    <br/> A decoding model was built to interpret neural signals, specifically Dentate Gyrus's calcium signlas from mice.
+</p>
+
 
 export function Works(){
     return (
@@ -23,9 +29,11 @@ export function Works(){
                     projectIntro={projectIntro_raneblog}
                 />
                 <WorkCard 
-                    name="Dentate Gyrus Project"
+                    name="Dentate Gyrus Decoding Model"
                     duration="2021.10 ~ 2023.9"
                     tags={['python', 'docker', 'machine learning']}
+                    githubLink="https://github.com/kisaragiRY/decoding-DG"
+                    projectIntro={projectIntro_dentate}
                 />
             </div>
         </WorkWrapper >
