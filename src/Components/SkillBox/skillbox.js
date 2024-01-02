@@ -9,6 +9,7 @@ margin: .5em;
 & div:nth-child(1) {
     position: relative;
     height: 2em;
+    margin: .5em 0;
 }
 
 // title
