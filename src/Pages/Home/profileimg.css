@@ -1,9 +1,0 @@
-.profileimg{
-    background-image: url('../../Assets/profile.png');
-    background-position: center 40%;
-    background-size: 200% auto;
-}
-.profileimg p {
-    font-size: 1.5em;
-    letter-spacing: 5px;
-}

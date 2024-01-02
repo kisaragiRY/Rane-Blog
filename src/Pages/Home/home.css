@@ -58,10 +58,3 @@
 
 }
 
-.homebox-wrapper:hover {
-    transition: all .4s ease;
-    transform: scale(1.02);
-    cursor: pointer;
-
-    box-shadow: 5px 5px 5px grey;
-}
